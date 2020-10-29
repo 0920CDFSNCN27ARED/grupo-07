@@ -1,4 +1,4 @@
-# CONSOLAS RETRO
+# CONSOLE HUB
 
 Este sitio se especializa en la venta de consolas de todas las generaciones para uso dómestico. Orientado a jugadores de todas de las edades.
 
