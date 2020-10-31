@@ -1,0 +1,24 @@
+{
+  "name": "grupo-07",
+  "version": "1.0.0",
+  "description": "Este sitio se especializa en la venta de consolas de todas las generaciones para uso dómestico. Orientado a jugadores de todas de las edades.",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0920CDFSNCN27ARED/grupo-07.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/0920CDFSNCN27ARED/grupo-07/issues"
+  },
+  "homepage": "https://github.com/0920CDFSNCN27ARED/grupo-07#readme"
+}
