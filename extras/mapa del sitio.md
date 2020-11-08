@@ -6,6 +6,7 @@
     -   SNES
     -   Gameboy
     -   Gameboy Color
+    -   Sega
     -   etc?
 -   XBOX
 

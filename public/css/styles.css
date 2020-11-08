@@ -3,3 +3,70 @@
     margin: 0;
     padding: 0;
 }
+
+/* .colors {
+    color: #0d0221;
+    color: #0f084b;
+    color: #26408b;
+    color: #a6cfd5;
+    color: #c2e7d9;
+    color: #db2b39;
+} */
+.colors {
+    color: rgba(14, 19, 31, 1);
+    color: rgba(56, 64, 95, 1);
+    color: rgba(89, 84, 108, 1);
+    color: rgba(139, 147, 156, 1);
+    color: rgb(19, 194, 133);
+}
+.hidden {
+    display: none;
+}
+
+.centered ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header {
+    background-color: rgb(19, 194, 133);
+}
+.footer {
+    background-color: rgba(56, 64, 95, 1);
+}
+.home-page-categories {
+    background-color: rgba(139, 147, 156, 1);
+}
+body {
+    background-color: #c2e7d9;
+}
+
+.header-img-box {
+    display: flex;
+}
+
+.profile {
+    display: flex;
+}
+#logo {
+    height: 100%;
+    width: 100%;
+}
+
+#profile-pic {
+    height: 50%;
+    width: 50%;
+}
+
+#menu-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #0044aa;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px 0px;
+    text-align: center;
+}
