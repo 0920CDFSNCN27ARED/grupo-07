@@ -5,111 +5,119 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Console Hub</title>
         <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/themes.css" />
+        <link rel="stylesheet" href="css/forms.css" />
     </head>
     <body>
-        <header class="header">
-            <div class="header-img-box">
-                <div class="logo">
-                    <img id="logo" src="img/logo-blue.webp" />
+        <header>
+            <section class="d-flex justify-center">
+                <div class="d-flex justify-center">
+                    <img class="w-50" id="logo" src="img/logo-blue.webp" />
                 </div>
-                <div class="profile">
-                    <img id="profile-pic" src="img/guest-user.jpg" /> -->
-                </div>
-                <div class="menu-icon-box">
-                    <i id="menu-icon" class="fas fa-bars"></i>
-                </div>
-            </div>
-            <nav class="centered">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/categories"></a>Categorías</li>
-                    <li><a href="/shop">Carrito de compras</a></li>
-                    <li><a href="/about-us">Nosotros</a></li>
-                </ul>
-            </nav>
+                <div class="d-flex justify-end pos-absolute">
+                    <img
+                        id="profile-pic"
+                        src="/img/guest-account.png"
+                        alt="Guest account"
+                    />
+                    <!-- <div>
+                        <i id="profile-icon" class="fas fa-bars"></i>
+                    </div>
 
-            <!--  Menu dropdown del perfil
-        <nav>
-            <ul>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Profile</a></li>
-            </ul>
-        </nav> -->
+                    <nav>
+                        <a href="#">Profile</a>
+                        <a href="#">Profile</a>
+                        <a href="#">Profile</a>
+                        <a href="#">Profile</a>
+                    </nav> -->
+                </div>
+            </section>
+
+            <nav class="menu">
+                <a href="/">Home</a>
+                <a href="/categories">Categorías</a>
+                <a href="/shop">Shop</a>
+                <a href="/about-us">Nosotros</a>
+            </nav>
         </header>
 
-        <main>
-            <div>
+        <main class="d-flex-col">
+            
+            <div class="banner">
+                <img class="w-100" id="banner-img-1" src="/img/background-black.jpg" alt="Banner" />
+                
+                <div class="banner-text">
+                    <div class="top-text">Lorem ipsum dolor.</div>
+                    <div class="middle-text">Lorem, ipsum dolor sit amet consectetur.</div>
+                    <div class="bottom-text">Lorem, ipsum.</div>
+                </div>
+            </div>
+            <!-- <img id="banner-img-2" src="" alt=""> -->
+            <!-- <img id="banner-img-3" src="" alt=""> -->
+            <!-- <img id="banner-img-4" src="" alt=""> -->
+            <!-- <img id="banner-img-5" src="" alt=""> -->
+           
+            <div class="search-bar-box">
                 <label for="search-bar" class="hidden">Barra de búsqueda</label>
-                <input
-                    type="text"
-                    id="search-bar"
-                    placeholder="Buscar consolas, accesorios y más..."
-                />
+                <input type="text" id="search-bar" placeholder="Buscar consolas, accesorios y más..." />
             </div>
+            
+            <h1 class="text-center margin-y-10">Categorías</h1>
 
-            <div>
-                <!-- <img id="banner-img-1" src="" alt=""> -->
-                <!-- <img id="banner-img-2" src="" alt=""> -->
-                <!-- <img id="banner-img-3" src="" alt=""> -->
-                <!-- <img id="banner-img-4" src="" alt=""> -->
-                <!-- <img id="banner-img-5" src="" alt=""> -->
-            </div>
+            <section class="d-flex justify-evenly fit-content">
 
-            <section class="home-page-categories">
-                <h3>Categorías</h3>
-                <div>
-                    <!-- <img src="" alt=""> -->
-                    <a href="/categories/xbox">Xbox</a>
-                </div>
+                <article class="category-card">
+                    <img class="w-100" src="/img/ps-logo.jpg" alt="Logo Playstation" />
+                    <a class="hidden" href="/categories/playstation" >Playstation</a >
+                </article>
 
-                <div>
-                    <!-- <img src="" alt=""> -->
-                    <a href="categories/playstation">Playstation</a>
-                </div>
+                <article class="category-card">
+                    <img class="w-100" src="/img/xbox-logo.png" alt="Logo Xbox" />
+                    <a class="hidden" href="/categories/xbox">Xbox</a>
+                </article>
 
-                <div>
-                    <!-- <img src="" alt=""> -->
-                    <a href="categories/nintendo">Nintendo</a>
-                </div>
+                <article class="category-card">
+                    <img class="w-100" src="/img/nintendo-logo.jpg" alt="Nintendo" />
+                    <a class="hidden" href="categories/nintendo">Nintendo</a>
+                </article>
 
-                <div>
-                    <!-- <img src="" alt=""> -->
-                    <a href="categories/retro">Retro</a>
-                </div>
+                <article class="category-card">
+                    <img class="w-100" src="/img/retro.jpg" alt="Retro" />
+                    <a class="hidden" href="categories/retro">Retro</a>
+                </article>
 
-                <div>
-                    <!-- <img src="" alt=""> -->
-                    <a href="categories/accesories">Accesorios</a>
-                </div>
+                <article class="category-card">
+                    <img class="w-100" src="/img/acc1.jpg" alt="Accesories" />
+                    <a class="hidden" href="categories/accesories" >Accesorios</a >
+                </article>
             </section>
         </main>
-        <footer class="footer">
-            <section>
-                <ul>
-                    <li><a href="">Xbox</a></li>
-                    <li><a href="">Playstation</a></li>
-                    <li><a href="">Nintendo</a></li>
-                    <li><a href="">Consolas Retro</a></li>
-                    <li><a href="">Accesorios</a></li>
-                    <li><a href="">Prensa</a></li>
-                    <li><a href="">Contacto</a></li>
-                </ul>
+        <footer class="margin-10">
+            <section class="hidden">
+                <a href="/product/xbox">Xbox</a>
+                <a href="/product/playstation">Playstation</a>
+                <a href="/product/nintendo">Nintendo</a>
+                <a href="/product/retro">Consolas Retro</a>
+                <a href="/product/accesories">Accesorios</a>
+                <a href="#">Prensa</a>
+                <a href="#">Contacto</a>
             </section>
 
-            <div>
-                <p>Direccion</p>
-                <p>Telefono de contacto</p>
-                <p>Copyright y términos legales</p>
+            <section class="d-flex-col align-center font-4-vw">
+                <span>B. Mitre 2049, Moreno, Buenos Aires</span>
+                <span>(0237) 462-4045</span>
+            </section>
+
+            <section class="d-flex margin-y-10 justify-evenly">
+                <a href="www.facebook.com/consolehub" ><img src="#0" alt="FB" /></a>
+                <a href="www.instagram.com/consolehub" ><img src="#0" alt="IG" /></a>
+                <a href="www.youtube.com/consolehub" ><img src="#0" alt="YT" /></a>
+                <a href="www.twitter.com/consolehub" ><img src="#0" alt="TW" /></a>
+            </section>
+            <div class="text-center">
+                <small class="italic inline" >Copyright - Lorem ipsum dolor sit amet consectetur.</small >
             </div>
-
-            <section>
-                <a href=""><img src="" alt="Facebook" /></a>
-                <a href=""><img src="" alt="Instagram" /></a>
-                <a href=""><img src="" alt="Youtube" /></a>
-                <a href=""><img src="" alt="Twitter" /></a>
-            </section>
         </footer>
     </body>
 </html>

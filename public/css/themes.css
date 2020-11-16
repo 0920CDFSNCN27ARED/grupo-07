@@ -1,0 +1,25 @@
+.color-palletes {
+    --mint-green: #b9ffb7ff;
+    --magic-mint: #abedc6ff;
+    --turquoise-green: #98d9c2ff;
+    --deep-saffron: #f19a3eff;
+    --black-coffee: #403233ff;
+
+    color: #0d0221;
+    color: #0f084b;
+    color: #26408b;
+    color: #a6cfd5;
+    color: #c2e7d9;
+    color: #db2b39;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.font-14 {
+    font-size: 14px;
+}
+.font-4-vw {
+    font-size: 4vw;
+}

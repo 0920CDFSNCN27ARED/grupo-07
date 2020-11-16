@@ -1,65 +1,27 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+header,
+main {
+    margin: 1em;
 }
-
-/* .colors {
-    color: #0d0221;
-    color: #0f084b;
-    color: #26408b;
-    color: #a6cfd5;
-    color: #c2e7d9;
-    color: #db2b39;
+/* header{
+    background-image: url("/img/background-clear.jpg") ;
 } */
-.colors {
-    color: rgba(14, 19, 31, 1);
-    color: rgba(56, 64, 95, 1);
-    color: rgba(89, 84, 108, 1);
-    color: rgba(139, 147, 156, 1);
-    color: rgb(19, 194, 133);
-}
-.hidden {
-    display: none;
+body{
+    background-image: url("/img/x-2.jpg");
+    background-position: center;
+    background-color: black;   
 }
 
-.centered ul li {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
 
-.header {
-    background-color: rgb(19, 194, 133);
-}
-.footer {
-    background-color: rgba(56, 64, 95, 1);
-}
-.home-page-categories {
-    background-color: rgba(139, 147, 156, 1);
-}
-body {
-    background-color: #c2e7d9;
-}
-
-.header-img-box {
-    display: flex;
-}
-
-.profile {
-    display: flex;
-}
-#logo {
-    height: 100%;
-    width: 100%;
+a {
+    text-decoration: none;
 }
 
 #profile-pic {
-    height: 50%;
-    width: 50%;
+    width: 15%;
+    position: relative;
+    left: 14px;
 }
-
-#menu-icon {
+/* #profile-icon {
     width: 40px;
     height: 40px;
     background-color: #0044aa;
@@ -68,5 +30,69 @@ body {
     padding: 10px;
     border-radius: 5px;
     margin: 20px 0px;
+    text-align: center;
+} */
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px;
+}
+
+.category-card {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 200px;
+    /* padding: 30px; */
+    margin: 20px;
+    /* border: 2.5mm ridge rgba(107, 1, 153, 0.6); */
+    border-radius: 10px;
+    text-align: center;
+}
+
+.banner {
+    width: 90vw;
+    height: 100%;
+
+    position: relative;
+
+    inline-size: fit-content; /* ??? */ 
+}
+.banner-text{
+    color: blanchedalmond;
+    position: absolute;
+    top: 48%;
+    left: 37%;
+    transform: translate(-50%, -50%); /* ??? */
+    
+}
+
+.top-text{
+    margin: 5px 0;
+    font-size: x-large;
+    font-weight: bolder;
+}
+.middle-text{
+    margin: 10px 0;
+    font-size: medium;
+    font-weight: 400;
+    text-decoration: underline;
+}
+.bottom-text{
+    margin: 5px 0;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.search-bar-box{
+    margin-top: 10px;
+    padding: 10px;
+
+    align-self: center;
     text-align: center;
 }
