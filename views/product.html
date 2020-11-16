@@ -4,48 +4,128 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Product</title>
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/themes.css" />
+        <link rel="stylesheet" href="css/forms.css" />
     </head>
     <body>
-        <header></header>
-        <body>
-            <section>
-                <div>
-                    <p>Titulo</p>
+        <header>
+            <section class="d-flex justify-center">
+                <div class="d-flex justify-center">
+                    <img class="w-50" id="logo" src="img/logo-blue.webp" />
                 </div>
+                <div class="d-flex justify-end pos-absolute">
+                    <img
+                        id="profile-pic"
+                        src="/img/guest-account.png"
+                        alt="Guest account"
+                    />
+                    <!-- <div>
+                        <i id="profile-icon" class="fas fa-bars"></i>
+                    </div>
 
-                <div>
-                    <p>Descripción</p>
-                </div>
-
-                <div>
-                    <img src="#" alt="Imagen del producto" />
-                </div>
-            </section>
-
-            <section>
-                <p>Especificaciones</p>
-            </section>
-
-            <section>
-                <div>
-                    <img src="#" alt="Imagen 2" />
-                </div>
-
-                <div>
-                    <option value="#">
-                        <select name="type" id="type">
-                            Tipo 1
-                        </select>
-                        <select name="type" id="type">
-                            Tipo 2
-                        </select>
-                        <select name="type" id="type">
-                            Tipo 3
-                        </select>
-                    </option>
+                    <nav>
+                        <a href="#">Profile</a>
+                        <a href="#">Profile</a>
+                        <a href="#">Profile</a>
+                        <a href="#">Profile</a>
+                    </nav> -->
                 </div>
             </section>
-        </body>
-        <footer></footer>
+
+            <nav class="menu">
+                <a href="/">Home</a>
+                <a href="/categories">Categorías</a>
+                <a href="/shop">Shop</a>
+                <a href="/about-us">Nosotros</a>
+            </nav>
+        </header>
+
+        <main>
+            <section id="product-intro" class="d-flex align-center justify-evenly w-100 text-center ">  
+                <div id="title-box" class="w-100 margin-10">
+                    <p>Lorem, ipsum dolor.</p>
+                </div>
+
+                <div id="description-box" class="w-100 margin-x-10">
+                    <p class="font-smaller">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut aliquam ipsam nobis labore cum sapiente!</p>
+                </div>
+
+                <div class="margin-10">
+                    <img class="w-100" src="/img/pile-of-consoles.jpg" alt="Imagen del producto" />
+                </div> 
+            </section>
+
+            <section id="product-specs" class="d-flex-col w-100 align-center margin-y-20" >
+                <strong>Especificaciones</strong>
+                <p class="h-50 margin-10 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex a delectus commodi adipisci assumenda culpa, doloremque laborum natus quia maxime sunt veritatis odit eveniet sed.</p>
+                <p class="h-50 margin-10 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, necessitatibus? Sapiente eius assumenda possimus cum.</p>
+            </section>
+
+            <section id="product-checkout" class="d-flex-col w-100 align-center ">
+                <div class="margin-10 w-auto">
+                    <img class="w-100" src="/img/ps3.jpg" alt="Imagen 2" />
+                </div>
+                <section class="d-flex w-50 h-100">
+                    <div class="d-flex justify-between padding-y-10 w-100">
+                        <label for="modelo">Modelo:</label>
+                        
+                        <select  id="modelo">
+                            <option value="modelo1">Slim</option>
+                            <option value="modelo2">Pro</option>                                           
+                        </select>
+                        
+                    </div>
+
+                    <div class="d-flex justify-between padding-y-10 w-100">
+                        <label for="color">Color:</label>
+                        <select id="color">
+                            <option value="color1">Black</option>
+                            <option value="color2">Red</option>                                           
+                        </select>
+                    </div>
+
+                    <div class="d-flex justify-between padding-y-10 w-100">
+                        <label for="cantidad">Cantidad:</label>
+                        <select id="cantidad">
+                            <option value="num1">1</option>
+                            <option value="num2">2</option>   
+                            <option value="num3">3</option>                                        
+                        </select>
+                    </div>
+
+                </section>
+                <div class="margin-top-1em">
+                    <button type="submit">Agregar al carrito</button>
+                </div>
+            </section>
+        </main>
+        <footer class="margin-10">
+            <section class="hidden">
+                <a href="/product/xbox">Xbox</a>
+                <a href="/product/playstation">Playstation</a>
+                <a href="/product/nintendo">Nintendo</a>
+                <a href="/product/retro">Consolas Retro</a>
+                <a href="/product/accesories">Accesorios</a>
+                <a href="#">Prensa</a>
+                <a href="#">Contacto</a>
+            </section>
+
+            <section class="d-flex-col align-center font-4-vw">
+                <span>B. Mitre 2049, Moreno, Buenos Aires</span>
+                <span>(0237) 462-4045</span>
+            </section>
+
+            <section class="d-flex margin-y-10 justify-evenly">
+                <a href="www.facebook.com/consolehub" ><img src="#0" alt="FB" /></a>
+                <a href="www.instagram.com/consolehub" ><img src="#0" alt="IG" /></a>
+                <a href="www.youtube.com/consolehub" ><img src="#0" alt="YT" /></a>
+                <a href="www.twitter.com/consolehub" ><img src="#0" alt="TW" /></a>
+            </section>
+            <div class="text-center">
+                <small class="italic inline" >Copyright - Lorem ipsum dolor sit amet consectetur.</small >
+            </div>
+        </footer>
     </body>
 </html>

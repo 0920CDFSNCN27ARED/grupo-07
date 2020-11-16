@@ -16,7 +16,9 @@
 .italic {
     font-style: italic;
 }
-
+.font-smaller{
+    font-size: smaller;
+}
 .font-14 {
     font-size: 14px;
 }
