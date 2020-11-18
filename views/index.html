@@ -4,24 +4,31 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Console Hub</title>
-        <link rel="stylesheet" href="css/styles.css" />
+
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
         <link rel="stylesheet" href="css/base.css" />
         <link rel="stylesheet" href="css/themes.css" />
         <link rel="stylesheet" href="css/forms.css" />
+        <link rel="stylesheet" href="css/styles.css" /> 
+
+        <link rel="stylesheet" href="css/media-sm.css" media="only screen and (min-width: 600px)">
+        <link rel="stylesheet" href="css/media-md.css" media="only screen and (min-width: 768px)">
+        <link rel="stylesheet" href="css/media-lg.css" media="only screen and (min-width: 992px)">
+        <link rel="stylesheet" href="css/media-xl.css" media="only screen and (min-width: 1200px)">
+
+        
     </head>
     <body>
         <header>
             <section class="d-flex justify-center">
                 <div class="d-flex justify-center">
-                    <img class="w-50" id="logo" src="img/logo-blue.webp" />
+                    <img class="w-50" id="logo" src="img/download-removebg-preview.png"/>
                 </div>
-                <div class="d-flex justify-end pos-absolute">
-                    <img
-                        id="profile-pic"
-                        src="/img/guest-account.png"
-                        alt="Guest account"
-                    />
-                    <!-- <div>
+                <div class="d-flex justify-end">
+                    <img id="profile-pic" src="/img/guest-account.png" alt="Guest account"/>
+                     
+                <!--<div>
                         <i id="profile-icon" class="fas fa-bars"></i>
                     </div>
 
@@ -34,62 +41,88 @@
                 </div>
             </section>
 
-            <nav class="menu">
-                <a href="/">Home</a>
-                <a href="/categories">Categorías</a>
+            <nav class="nav-bar" role="navigation">    
+                <a href="/">HOME</a>
                 <a href="/shop">Shop</a>
-                <a href="/about-us">Nosotros</a>
+                <a href="/about-us">Nosotros</a>                      
             </nav>
         </header>
 
+        <div class="text-intro">
+            <div class="top-text">Lorem ipsum dolor.</div>
+            <div class="middle-text">Lorem, ipsum dolor sit amet consectetur.</div>
+            <div class="bottom-text">Lorem, ipsum.</div>
+        </div> 
+
         <main class="d-flex-col">
-            
-            <div class="banner">
-                <img class="w-100" id="banner-img-1" src="/img/background-black.jpg" alt="Banner" />
-                
-                <div class="banner-text">
+            <div class="image-banner">
+                <div class="hidden text-banner">
                     <div class="top-text">Lorem ipsum dolor.</div>
                     <div class="middle-text">Lorem, ipsum dolor sit amet consectetur.</div>
                     <div class="bottom-text">Lorem, ipsum.</div>
+                </div> 
+
+                <div class="slide">
+                    <img src="/img/banner/banner-2.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/img/banner/banner-1.jpg" alt="">
+                </div>
+
+        
+                <div class="slide">
+                    <img src="/img/banner/banner-3.jpg" alt="">
+                </div>
+
+                <div class="slide">
+                    <img src="/img/banner/banner-4.jpg" alt="">
+                </div>
+
+                
                 </div>
             </div>
-            <!-- <img id="banner-img-2" src="" alt=""> -->
-            <!-- <img id="banner-img-3" src="" alt=""> -->
-            <!-- <img id="banner-img-4" src="" alt=""> -->
-            <!-- <img id="banner-img-5" src="" alt=""> -->
+            
            
             <div class="search-bar-box">
                 <label for="search-bar" class="hidden">Barra de búsqueda</label>
                 <input type="text" id="search-bar" placeholder="Buscar consolas, accesorios y más..." />
             </div>
             
-            <h1 class="text-center margin-y-10">Categorías</h1>
+            <section class="categories">
 
-            <section class="d-flex justify-evenly fit-content">
-
-                <article class="category-card">
-                    <img class="w-100" src="/img/ps-logo.jpg" alt="Logo Playstation" />
-                    <a class="hidden" href="/categories/playstation" >Playstation</a >
+                <article class="category pos-relative">
+                    <span>PLAYSTATION</span>
+                    <a href="/">
+                        <img class="w-100" src="/img/ps-logo.jpg" alt="Logo Playstation"/>
+                    </a>
                 </article>
 
-                <article class="category-card">
-                    <img class="w-100" src="/img/xbox-logo.png" alt="Logo Xbox" />
-                    <a class="hidden" href="/categories/xbox">Xbox</a>
+                <article class="category">
+                    <span>XBOX</span>            
+                    <a href="/">
+                        <img class="w-100" src="/img/xbox-logo.png" alt="Logo Xbox"/>
+                    </a>
                 </article>
 
-                <article class="category-card">
-                    <img class="w-100" src="/img/nintendo-logo.jpg" alt="Nintendo" />
-                    <a class="hidden" href="categories/nintendo">Nintendo</a>
+                <article class="category">
+                    <SPAN>NINTENDO</SPAN>
+                    <a href="/">
+                        <img class="w-100" src="/img/nintendo-logo.jpg" alt="Nintendo"/>
+                    </a>
                 </article>
 
-                <article class="category-card">
-                    <img class="w-100" src="/img/retro.jpg" alt="Retro" />
-                    <a class="hidden" href="categories/retro">Retro</a>
+                <article class="category">
+                    <span>RETRO</span>
+                    <a href="/">
+                        <img class="w-100" src="/img/retro.jpg" alt="Retro"/>
+                    </a>
                 </article>
 
-                <article class="category-card">
-                    <img class="w-100" src="/img/acc1.jpg" alt="Accesories" />
-                    <a class="hidden" href="categories/accesories" >Accesorios</a >
+                <article class="category">
+                    <span>ACCESORIOS Y MÁS</span>
+                    <a href="categories/accesories">
+                        <img class="w-100" src="/img/acc1.jpg" alt="Accesories"/>
+                    </a>
                 </article>
             </section>
         </main>
@@ -104,7 +137,7 @@
                 <a href="#">Contacto</a>
             </section>
 
-            <section class="d-flex-col align-center font-4-vw">
+            <section class="d-flex-col align-center">
                 <span>B. Mitre 2049, Moreno, Buenos Aires</span>
                 <span>(0237) 462-4045</span>
             </section>

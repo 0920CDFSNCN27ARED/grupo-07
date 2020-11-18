@@ -13,7 +13,15 @@ app.get("/", (req, res) => {
 app.get("/product", (req, res) => {
     res.sendFile(path.resolve(__dirname, "views/product.html"));
 });
-
+app.get("/shop", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "views/shop.html"));
+});
+app.get("/register", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "views/register.html"));
+});
+app.get("/login", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "views/login.html"));
+});
 app.get("*", (req, res) => {
     res.status(404).send("No hay nada por aquí");
 });

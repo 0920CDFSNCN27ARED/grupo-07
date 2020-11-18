@@ -6,6 +6,9 @@
     /* border: 1px dotted black; */
 }
 
+img {
+    display: block;
+}
 .hidden {
     display: none;
 }
@@ -146,4 +149,11 @@
 
 .inline {
     display: inline;
+}
+
+.spacing-1{
+    letter-spacing: 1px;
+}
+.spacing-2{
+    letter-spacing: 2px;
 }

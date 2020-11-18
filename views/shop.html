@@ -4,29 +4,129 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Carrito de Compras</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/themes.css" />
+        <link rel="stylesheet" href="css/forms.css" />
+    </head>
     </head>
     <body>
-        <h2>Mi carrito de compras</h2>
+        <<header>
+            
+            <section class="d-flex justify-center">
+                <div class="d-flex justify-center">
+                    <img class="w-50" id="logo" src="img/download-removebg-preview.png" />
+                </div>
+                <div class="d-flex justify-end">
+                    <img id="profile-pic" src="/img/guest-account.png" alt="Guest account" />
+                     
+                <!--<div>
+                        <i id="profile-icon" class="fas fa-bars"></i>
+                    </div>
 
-        <section>
-            <p>Productos seleccionados</p>
-            <p>Métodos de pago y envío</p>
-            <p>Finalizar compra</p>
+                    <nav>
+                        <a href="#">Profile</a>
+                        <a href="#">Profile</a>
+                        <a href="#">Profile</a>
+                        <a href="#">Profile</a>
+                    </nav> -->
+                </div>
+            </section>
+
+            <nav class="nav-bar" role="navigation">    
+                <a href="/">Home</a>
+                <a href="/shop">Shop</a>
+                <a href="/about-us">Nosotros</a>                      
+            </nav>
+        </header>   
+        <section class="d-flex-col">
+            <legend class="text-center">Mi carrito de compras</legend>
+            
+            <section id="shop-steps" class="d-flex justify-center align-center">
+                <p>Productos seleccionados</p>
+                <p class="hidden">Métodos de pago y envío</p>
+                <p class="hidden">Finalizar compra</p>
+            </section>
+
+            <section>
+                <table>
+                    <caption class="hidden">Mi carrito de compras</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Producto</th>
+                            <th scope="col">U</th>
+                            <th scope="col">Precio Unitario</th>
+                            <th scope="col">Precio Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Playstation 4</th>
+                            <td>1</td>
+                            <td>$ 18000</td>
+                            <td>$ 18000</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Controlador DualShock 4</th>
+                            <td>2</td>
+                            <td>$ 1500</td>
+                            <td>$ 3000</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th scope="row" colspan="2">Total: </th>
+                            <td>$ 21000</th>
+                        </tr>
+                    </tfoot>
+                </table>
+
+                <div>
+                    <input type="button" value="Save">
+                    <input type="button" value="Update">
+                    <input type="button" value="Delete">
+                </div>
+                <div>
+                    <!-- Detalles de los items del carrito de compra -->
+                </div>
+
+                <div>
+                    <!-- Productos seleccionados: Precio total -->
+                    <!-- Metodos de pago:  
+                        -Efectivo
+                        -Tarjeta
+                        -Metodo de envío -->
+                    <!-- Finalizar compra: Detalles finales y botón para comprar -->
+                </div>
+            </section>
         </section>
+        <footer class="margin-10">
+            <section class="hidden">
+                <a href="/product/xbox">Xbox</a>
+                <a href="/product/playstation">Playstation</a>
+                <a href="/product/nintendo">Nintendo</a>
+                <a href="/product/retro">Consolas Retro</a>
+                <a href="/product/accesories">Accesorios</a>
+                <a href="#">Prensa</a>
+                <a href="#">Contacto</a>
+            </section>
 
-        <section>
-            <div>
-                <!-- Detalles de los items del carrito de compra -->
-            </div>
+            <section class="d-flex-col align-center font-4-vw">
+                <span>B. Mitre 2049, Moreno, Buenos Aires</span>
+                <span>(0237) 462-4045</span>
+            </section>
 
-            <div>
-                <!-- Productos seleccionados: Precio total -->
-                <!-- Metodos de pago:  
-                    -Efectivo
-                    -Tarjeta
-                    -Metodo de envío -->
-                <!-- Finalizar compra: Detalles finales y botón para comprar -->
+            <section class="d-flex margin-y-10 justify-evenly">
+                <a href="www.facebook.com/consolehub" ><img src="#0" alt="FB" /></a>
+                <a href="www.instagram.com/consolehub" ><img src="#0" alt="IG" /></a>
+                <a href="www.youtube.com/consolehub" ><img src="#0" alt="YT" /></a>
+                <a href="www.twitter.com/consolehub" ><img src="#0" alt="TW" /></a>
+            </section>
+            <div class="text-center">
+                <small class="italic inline" >Copyright - Lorem ipsum dolor sit amet consectetur.</small >
             </div>
-        </section>
+        </footer>
     </body>
 </html>
