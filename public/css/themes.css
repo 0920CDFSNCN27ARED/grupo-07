@@ -13,7 +13,9 @@
     color: #db2b39;
 }
 
-
+.color-primary{
+    color:  #aadedc;
+}
 .italic {
     font-style: italic;
 }
@@ -23,6 +25,45 @@
 .font-14 {
     font-size: 14px;
 }
+.font-6-vw{font-size: 6vw;}
+.font-12{font-size: 12px;}
 .font-4-vw {
     font-size: 4vw;
+}
+
+p, strong, label, #product-checkout{
+    color: #aadedc;
+    letter-spacing: 1.5px;
+
+}
+.font-title-box{
+    
+    text-align: center;
+    filter: drop-shadow(2px 4px 6px black);  
+}
+.font-title{
+    color: #aadedc;
+    margin: 5px 0;
+    font-size: x-large;
+    font-weight: 600;
+}
+.font-paragraph{
+    color: #aadedc;
+    margin: 5px 0;
+    font-size: larger;
+    font-weight: 500;
+}
+.text-banner{
+    color: #c34588;
+    position: absolute;
+    border-top-style: ridge;
+    margin: 30px;
+}
+.middle-text{
+    color: #aadedc;
+    margin: 10px 0;
+    font-size: medium;
+    font-weight: 400;
+    text-decoration: underline;
+    
 }

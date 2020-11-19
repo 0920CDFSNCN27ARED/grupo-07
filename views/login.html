@@ -4,26 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/themes.css" />
+        <link rel="stylesheet" href="css/forms.css" />
+        <link rel="stylesheet" href="css/styles.css" /> 
+
+        <link rel="stylesheet" href="css/media-sm.css" media="only screen and (min-width: 600px)">
+        <link rel="stylesheet" href="css/media-md.css" media="only screen and (min-width: 768px)">
+        <link rel="stylesheet" href="css/media-lg.css" media="only screen and (min-width: 992px)">
+        <link rel="stylesheet" href="css/media-xl.css" media="only screen and (min-width: 1200px)">
 </head>
-<body>
+<body class="d-flex-col text-center margin-10">
     <h2>Ingresa con tu cuenta</h2>
 
         <form action="/" method="GET">
-            <div>
-                <label for="username" class="hidden">Username:</label>
-                <input type="text" id="username" name="username" placeholder="Escribe tu nombre de usuario"/>
+            <div class="margin-10">
+                <div class="margin-10"> 
+                    <label for="username" class="hidden">Username:</label>
+                    <input type="text" id="username" name="username" placeholder="Escribe tu nombre de usuario"/>
+                </div>
+                <div>
+                    <label for="password" class="hidden">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Escribe tu contraseña"/>
+                    
+                </div>
+                <div><a class="font-12" href="#">Olvidaste tu contraseña?</a></div>
+                <div class="margin-10">
+                    <input type="checkbox" name="logged-in" id="logged-in" />
+                    <label for="logged-in">Mantenerme logueado</label>
+                    
+                </div>
+                <div class="margin-10">
+                    
+                    <button type="submit" value="Enviar">Enviar</button>
+                </div>
+                
             </div>
-            <div>
-                <label for="password" class="hidden">Password</label>
-                <input type="password" name="password" id="password" placeholder="Escribe tu contraseña"/>
-                <a href="#">Olvidaste tu contraseña?</a>
-            </div>
-
-            <label for="logged-in">Mantenerme logueado</label>
-            <input type="checkbox" name="logged-in" id="logged-in" />
-            <button type="submit" value="Enviar"></button>
-
-            <div></div>
+            
         </form>
 </body>
 </html>

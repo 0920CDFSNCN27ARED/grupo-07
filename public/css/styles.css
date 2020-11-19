@@ -7,12 +7,13 @@ main {
 /* header{
     background-image: url("/img/background-clear.jpg") ;
 } */
-body{
+.body{
     background-image: url("/img/x-2.jpg");
     background-position: center;
     background-color: black;   
     background-size: cover;
 }
+
 
 .nav-bar {
     display: flex;
@@ -71,6 +72,7 @@ body{
     width: fit-content;
     
 }
+
 .category {
     display: flex;
     flex-direction: column;
@@ -120,36 +122,11 @@ body{
     width: 100%;
     height: 100%;
 }
-.text-banner{
-    color: #c34588;
-    position: absolute;
-    border-top-style: ridge;
-    margin: 30px;
-}
-
-.text-intro{
-    color: black;
-    text-align: center;
-}
 
 
-.top-text{
-    margin: 5px 0;
-    font-size: x-large;
-    font-weight: bolder;
-}
-.middle-text{
-    margin: 10px 0;
-    font-size: medium;
-    font-weight: 400;
-    text-decoration: underline;
-    
-}
-.bottom-text{
-    margin: 5px 0;
-    font-size: larger;
-    font-weight: bold;
-}
+
+
+
 
 .search-bar-box{
     margin-top: 10px;
@@ -163,21 +140,9 @@ body{
     margin-top: 10px;
 }
 
-/* Product */
 
-/* #product-intro{
-    height: 33.3vh;
-}
-#product-specs{
-    height: 33.3vh;
-}
-#product-checkout{
-    height: 33.3vh;
-} */
-
-/* 
 #title-box{
-        width: 100%;
+    width: 100%;
     height: 30%;
     padding: 10px;
 }
@@ -187,19 +152,18 @@ body{
     width: 100%;
     height: 50%;
     padding: 10px;
-} */
+}
+
+
 
 table {
   table-layout: fixed;
   width: 100%;
   /* border-collapse: collapse; */
-  border: 3px solid rgb(17, 141, 199);
+  border: 3px solid rgb(201 215 221);
   
 }
-thead, tfoot{
-    color: white;
-    text-shadow: 1px 1px 1px black;
-}
+
 thead th:nth-child(1) {
   width: 20%;
 }
@@ -217,9 +181,15 @@ thead th:nth-child(4) {
 }
 
 th, td {
-  padding: 10px 20px;
+  padding: 10px;
+  margin: 5px 0;
+    font-size: 15px;
+    font-weight: 500;
+    color: #aadedc;
 }
-
+td{
+    font-style: italic;
+}
 
 
 tbody td {
@@ -229,3 +199,19 @@ tbody td {
 tfoot th {
   text-align: right;
 }
+
+.footer-border{
+    border-top: 8px double #fecb47;
+    filter: drop-shadow(2px 4px 6px black);
+    background-color: #e9ff0b52;
+    mix-blend-mode: color;
+    margin: 2vh 10vw;
+}
+.header-border{
+    border-bottom: 8px double #254A73;
+    filter: drop-shadow(2px 4px 6px black);
+    background-color: #0f3fdd;
+    mix-blend-mode: color;
+    margin: 0 10vw;
+}
+

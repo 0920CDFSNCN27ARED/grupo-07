@@ -61,6 +61,7 @@ img {
     flex-wrap: wrap;
 }
 
+
 /* position */
 .pos-relative {
     position: relative;
@@ -87,6 +88,9 @@ img {
 }
 .w-auto{
     width: auto;
+}
+.mw-33{
+    max-width: 33%;
 }
 
 /* height */
@@ -156,4 +160,15 @@ img {
 }
 .spacing-2{
     letter-spacing: 2px;
+}
+
+.backdrop-filter{
+    backdrop-filter: brightness(0.5);
+}
+
+.order-1{
+    order: 1;
+}
+.order-2{
+    order: 2;
 }

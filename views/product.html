@@ -4,20 +4,26 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Product</title>
-        <link rel="stylesheet" href="css/styles.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
         <link rel="stylesheet" href="css/base.css" />
         <link rel="stylesheet" href="css/themes.css" />
         <link rel="stylesheet" href="css/forms.css" />
+        <link rel="stylesheet" href="css/styles.css" /> 
+
+        <link rel="stylesheet" href="css/media-sm.css" media="only screen and (min-width: 600px)">
+        <link rel="stylesheet" href="css/media-md.css" media="only screen and (min-width: 768px)">
+        <link rel="stylesheet" href="css/media-lg.css" media="only screen and (min-width: 992px)">
+        <link rel="stylesheet" href="css/media-xl.css" media="only screen and (min-width: 1200px)">
     </head>
-    <body>
+    <body class="body">
         <header>
-            
             <section class="d-flex justify-center">
                 <div class="d-flex justify-center">
-                    <img class="w-50" id="logo" src="img/download-removebg-preview.png" />
+                    <img class="w-50" id="logo" src="img/download-removebg-preview.png"/>
                 </div>
                 <div class="d-flex justify-end">
-                    <img id="profile-pic" src="/img/guest-account.png" alt="Guest account" />
+                    <img id="profile-pic" src="/img/guest-account.png" alt="Guest account"/>
                      
                 <!--<div>
                         <i id="profile-icon" class="fas fa-bars"></i>
@@ -40,9 +46,9 @@
         </header>
 
         <main>
-            <section id="product-intro" class="d-flex align-center justify-evenly w-100 text-center ">  
+            <section id="product-intro" class="backdrop-filter d-flex align-center justify-evenly w-100 text-center ">  
                 <div id="title-box" class="w-100 margin-10">
-                    <p>Lorem, ipsum dolor.</p>
+                    <p class="title-font">Lorem, ipsum dolor.</p>
                 </div>
 
                 <div id="description-box" class="w-100 margin-x-10">
@@ -54,13 +60,13 @@
                 </div> 
             </section>
 
-            <section id="product-specs" class="d-flex-col w-100 align-center margin-y-20" >
-                <strong>Especificaciones</strong>
+            <section id="product-specs" class="backdrop-filter d-flex-col w-100 align-center margin-y-20" >
+                <strong class="title-font">Especificaciones</strong>
                 <p class="h-50 margin-10 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex a delectus commodi adipisci assumenda culpa, doloremque laborum natus quia maxime sunt veritatis odit eveniet sed.</p>
                 <p class="h-50 margin-10 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, necessitatibus? Sapiente eius assumenda possimus cum.</p>
             </section>
 
-            <section id="product-checkout" class="d-flex-col w-100 align-center ">
+            <section id="product-checkout" class=" backdrop-filter d-flex-col w-100 align-center ">
                 <div class="margin-10 w-auto">
                     <img class="w-100" src="/img/ps3.jpg" alt="Imagen 2" />
                 </div>

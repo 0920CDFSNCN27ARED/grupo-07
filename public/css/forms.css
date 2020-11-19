@@ -1,0 +1,25 @@
+form  div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    width: 100%;
+}
+
+
+
+label{font-size: 14px;}
+
+form{
+        backdrop-filter: brightness(0.5);
+    
+    margin: 20px;
+}
+
+.tyc-box, .newsletter-box{
+    flex-direction: row;
+    
+}
+.tyc-box label, .newsletter-box label{
+    font: 10px;
+}
