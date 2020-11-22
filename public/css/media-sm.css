@@ -1,6 +1,13 @@
-.text-banner{
+.text-banner {
     display: initial;
 }
-.text-intro{
+.text-intro {
+    display: none;
+}
+
+#category {
+    padding: 1rem !important;
+}
+#category span {
     display: none;
 }

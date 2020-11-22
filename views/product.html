@@ -4,28 +4,55 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Product</title>
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+            rel="stylesheet"
+        />
 
         <link rel="stylesheet" href="css/base.css" />
         <link rel="stylesheet" href="css/themes.css" />
         <link rel="stylesheet" href="css/forms.css" />
-        <link rel="stylesheet" href="css/styles.css" /> 
+        <link rel="stylesheet" href="css/styles.css" />
 
-        <link rel="stylesheet" href="css/media-sm.css" media="only screen and (min-width: 600px)">
-        <link rel="stylesheet" href="css/media-md.css" media="only screen and (min-width: 768px)">
-        <link rel="stylesheet" href="css/media-lg.css" media="only screen and (min-width: 992px)">
-        <link rel="stylesheet" href="css/media-xl.css" media="only screen and (min-width: 1200px)">
+        <link
+            rel="stylesheet"
+            href="css/media-sm.css"
+            media="only screen and (min-width: 600px)"
+        />
+        <link
+            rel="stylesheet"
+            href="css/media-md.css"
+            media="only screen and (min-width: 768px)"
+        />
+        <link
+            rel="stylesheet"
+            href="css/media-lg.css"
+            media="only screen and (min-width: 992px)"
+        />
+        <link
+            rel="stylesheet"
+            href="css/media-xl.css"
+            media="only screen and (min-width: 1200px)"
+        />
     </head>
     <body class="body">
         <header>
-            <section class="d-flex justify-center">
-                <div class="d-flex justify-center">
-                    <img class="w-50" id="logo" src="img/download-removebg-preview.png"/>
+            <section class="d-flex justify-content-center">
+                <div class="d-flex justify-content-center">
+                    <img
+                        class="w-50"
+                        id="logo"
+                        src="img/download-removebg-preview.png"
+                    />
                 </div>
-                <div class="d-flex justify-end">
-                    <img id="profile-pic" src="/img/guest-account.png" alt="Guest account"/>
-                     
-                <!--<div>
+                <div class="d-flex justify-content-end">
+                    <img
+                        id="profile-pic"
+                        src="/img/guest-account.png"
+                        alt="Guest account"
+                    />
+
+                    <!--<div>
                         <i id="profile-icon" class="fas fa-bars"></i>
                     </div>
 
@@ -38,66 +65,94 @@
                 </div>
             </section>
 
-            <nav class="nav-bar" role="navigation">    
+            <nav class="nav-bar" role="navigation">
                 <a href="/">Home</a>
                 <a href="/shop">Shop</a>
-                <a href="/about-us">Nosotros</a>                      
+                <a href="/about-us">Nosotros</a>
             </nav>
         </header>
 
         <main>
-            <section id="product-intro" class="backdrop-filter d-flex align-center justify-evenly w-100 text-center ">  
+            <section
+                id="product-intro"
+                class="backdrop-filter d-flex align-items-center justify-evenly w-100 text-center"
+            >
                 <div id="title-box" class="w-100 margin-10">
                     <p class="title-font">Lorem, ipsum dolor.</p>
                 </div>
 
                 <div id="description-box" class="w-100 margin-x-10">
-                    <p class="font-smaller">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut aliquam ipsam nobis labore cum sapiente!</p>
+                    <p class="font-smaller">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Ut aliquam ipsam nobis labore cum sapiente!
+                    </p>
                 </div>
 
                 <div class="margin-10">
-                    <img class="w-100" src="/img/pile-of-consoles.jpg" alt="Imagen del producto" />
-                </div> 
+                    <img
+                        class="w-100"
+                        src="/img/pile-of-consoles.jpg"
+                        alt="Imagen del producto"
+                    />
+                </div>
             </section>
 
-            <section id="product-specs" class="backdrop-filter d-flex-col w-100 align-center margin-y-20" >
+            <section
+                id="product-specs"
+                class="backdrop-filter d-flex-col w-100 align-items-center margin-y-20"
+            >
                 <strong class="title-font">Especificaciones</strong>
-                <p class="h-50 margin-10 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex a delectus commodi adipisci assumenda culpa, doloremque laborum natus quia maxime sunt veritatis odit eveniet sed.</p>
-                <p class="h-50 margin-10 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, necessitatibus? Sapiente eius assumenda possimus cum.</p>
+                <p class="h-50 margin-10 text-center">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
+                    a delectus commodi adipisci assumenda culpa, doloremque
+                    laborum natus quia maxime sunt veritatis odit eveniet sed.
+                </p>
+                <p class="h-50 margin-10 text-center">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolorum, necessitatibus? Sapiente eius assumenda possimus
+                    cum.
+                </p>
             </section>
 
-            <section id="product-checkout" class=" backdrop-filter d-flex-col w-100 align-center ">
+            <section
+                id="product-checkout"
+                class="backdrop-filter d-flex-col w-100 align-items-center"
+            >
                 <div class="margin-10 w-auto">
                     <img class="w-100" src="/img/ps3.jpg" alt="Imagen 2" />
                 </div>
                 <section class="d-flex w-50 h-100">
-                    <div class="d-flex justify-between padding-y-10 w-100">
+                    <div
+                        class="d-flex justify-content-between padding-y-10 w-100"
+                    >
                         <label for="modelo">Modelo:</label>
-                        
-                        <select  id="modelo">
+
+                        <select id="modelo">
                             <option value="modelo1">Slim</option>
-                            <option value="modelo2">Pro</option>                                           
+                            <option value="modelo2">Pro</option>
                         </select>
-                        
                     </div>
 
-                    <div class="d-flex justify-between padding-y-10 w-100">
+                    <div
+                        class="d-flex justify-content-between padding-y-10 w-100"
+                    >
                         <label for="color">Color:</label>
                         <select id="color">
                             <option value="color1">Black</option>
-                            <option value="color2">Red</option>                                           
+                            <option value="color2">Red</option>
                         </select>
                     </div>
 
-                    <div class="d-flex justify-between padding-y-10 w-100">
+                    <div
+                        class="d-flex justify-content-between padding-y-10 w-100"
+                    >
                         <label for="cantidad">Cantidad:</label>
                         <select id="cantidad">
                             <option value="num1">1</option>
-                            <option value="num2">2</option>   
-                            <option value="num3">3</option>                                        
+                            <option value="num2">2</option>
+                            <option value="num3">3</option>
                         </select>
                     </div>
-
                 </section>
                 <div class="margin-top-1em">
                     <button type="submit">Agregar al carrito</button>
@@ -115,19 +170,29 @@
                 <a href="#">Contacto</a>
             </section>
 
-            <section class="d-flex-col align-center font-4-vw">
+            <section class="d-flex-col align-items-center font-4-vw">
                 <span>B. Mitre 2049, Moreno, Buenos Aires</span>
                 <span>(0237) 462-4045</span>
             </section>
 
             <section class="d-flex margin-y-10 justify-evenly">
-                <a href="www.facebook.com/consolehub" ><img src="#0" alt="FB" /></a>
-                <a href="www.instagram.com/consolehub" ><img src="#0" alt="IG" /></a>
-                <a href="www.youtube.com/consolehub" ><img src="#0" alt="YT" /></a>
-                <a href="www.twitter.com/consolehub" ><img src="#0" alt="TW" /></a>
+                <a href="www.facebook.com/consolehub"
+                    ><img src="#0" alt="FB"
+                /></a>
+                <a href="www.instagram.com/consolehub"
+                    ><img src="#0" alt="IG"
+                /></a>
+                <a href="www.youtube.com/consolehub"
+                    ><img src="#0" alt="YT"
+                /></a>
+                <a href="www.twitter.com/consolehub"
+                    ><img src="#0" alt="TW"
+                /></a>
             </section>
             <div class="text-center">
-                <small class="italic inline" >Copyright - Lorem ipsum dolor sit amet consectetur.</small >
+                <small class="italic inline"
+                    >Copyright - Lorem ipsum dolor sit amet consectetur.</small
+                >
             </div>
         </footer>
     </body>

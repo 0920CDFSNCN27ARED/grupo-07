@@ -1,32 +1,24 @@
 const express = require("express");
 const app = express();
-const productsRoutes = require("./routes/products.js")
-
-const path = require("path");
-
-app.use(express.static("public"));
 
 app.listen(3030, () => "Server is running in port 3030");
+app.use(express.static("public"));
 
-app.use("/productos", productsRoutes)
+const mainRoutes = require("./routes/main.js");
+app.use("/", mainRoutes);
 
-app.get("/", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "views/index.html"));
-});
-app.get("/product", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "views/product.html"));
-});
-app.get("/shop", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "views/shop.html"));
-});
-app.get("/register", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "views/register.html"));
-});
-app.get("/login", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "views/login.html"));
-});
+const categoriesRoutes = require("./routes/categories.js");
+app.use("/categories", categoriesRoutes);
+const productRoutes = require("./routes/product.js");
+app.use("/product", productRoutes);
+const shopRoutes = require("./routes/shop.js");
+app.use("/shop", shopRoutes);
+
+const registerRoutes = require("./routes/register.js");
+app.use("/register", registerRoutes);
+const loginRoutes = require("./routes/login.js");
+app.use("/login", loginRoutes);
+
 app.get("*", (req, res) => {
     res.status(404).send("No hay nada por aquí");
 });
-
-

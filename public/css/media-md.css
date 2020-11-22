@@ -6,37 +6,33 @@
     font-size: larger;
 }
 
-nav a:hover{
-    background:#309fc1d9;
-    color:black;
-    border-top:1px solid #2732cc;
-    border-right:1px solid#93a2f55e;
-    border-bottom:1px solid #93a2f55e;
-    border-left:1px solid #2732cc;
+nav a:hover {
+    background: #309fc1d9;
+    color: black;
+    border-top: 1px solid #2732cc;
+    border-right: 1px solid#93a2f55e;
+    border-bottom: 1px solid #93a2f55e;
+    border-left: 1px solid #2732cc;
 }
 nav a:nth-child(1):hover {
-    
-    border-radius: 20px 40px;
+    border-radius: 40px 40px;
     letter-spacing: 10px;
 }
 nav a:nth-child(2):hover {
-    
     border-radius: 40px 40px;
     letter-spacing: 10px;
 }
 nav a:nth-child(3):hover {
-  
-    border-radius: 40px 20px;
+    border-radius: 40px 40px;
     letter-spacing: 10px;
 }
 
 /* ARTICLE */
 
-.category-card span{
-    display: none;
+#category:hover span {
+    display: inline;
 }
 
-.text-banner div{
+.text-banner div {
     font-size: xx-large;
 }
-
