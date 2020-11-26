@@ -1,11 +1,6 @@
-* {
-    box-sizing: border-box;
+p {
     margin: 0;
-    padding: 0;
-
-    /* border: 1px dotted white; */
 }
-
 img {
     display: block;
 }

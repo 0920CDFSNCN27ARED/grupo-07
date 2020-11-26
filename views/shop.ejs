@@ -13,34 +13,7 @@
     </head>
     </head>
     <body class="body">
-        <header>
-            
-            <section class="d-flex justify-content-center">
-                <div class="d-flex justify-content-center">
-                    <img class="w-50" id="logo" src="img/download-removebg-preview.png" />
-                </div>
-                <div class="d-flex justify-content-end">
-                    <img id="profile-pic" src="/img/guest-account.png" alt="Guest account" />
-                     
-                <!--<div>
-                        <i id="profile-icon" class="fas fa-bars"></i>
-                    </div>
-
-                    <nav>
-                        <a href="#">Profile</a>
-                        <a href="#">Profile</a>
-                        <a href="#">Profile</a>
-                        <a href="#">Profile</a>
-                    </nav> -->
-                </div>
-            </section>
-
-            <nav class="nav-bar" role="navigation">    
-                <a href="/">Home</a>
-                <a href="/shop">Shop</a>
-                <a href="/about-us">Nosotros</a>                      
-            </nav>
-        </header>   
+        <%- include("partials/header.ejs") %>  
         <section class="title-font-box d-flex-col">
             <legend class="title-font">Mi carrito de compras</legend>
             
@@ -102,31 +75,6 @@
                 </div>
             </section>
         </section>
-        <footer class="margin-10">
-            <section class="hidden">
-                <a href="/product/xbox">Xbox</a>
-                <a href="/product/playstation">Playstation</a>
-                <a href="/product/nintendo">Nintendo</a>
-                <a href="/product/retro">Consolas Retro</a>
-                <a href="/product/accesories">Accesorios</a>
-                <a href="#">Prensa</a>
-                <a href="#">Contacto</a>
-            </section>
-
-            <section class="d-flex-col align-items-center font-4-vw">
-                <span>B. Mitre 2049, Moreno, Buenos Aires</span>
-                <span>(0237) 462-4045</span>
-            </section>
-
-            <section class="d-flex margin-y-10 justify-evenly">
-                <a href="www.facebook.com/consolehub" ><img src="#0" alt="FB" /></a>
-                <a href="www.instagram.com/consolehub" ><img src="#0" alt="IG" /></a>
-                <a href="www.youtube.com/consolehub" ><img src="#0" alt="YT" /></a>
-                <a href="www.twitter.com/consolehub" ><img src="#0" alt="TW" /></a>
-            </section>
-            <div class="text-center">
-                <small class="italic inline" >Copyright - Lorem ipsum dolor sit amet consectetur.</small >
-            </div>
-        </footer>
+        <%- include("partials/footer.ejs") %>
     </body>
 </html>

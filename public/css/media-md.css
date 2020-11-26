@@ -26,13 +26,38 @@ nav a:nth-child(3):hover {
     border-radius: 40px 40px;
     letter-spacing: 10px;
 }
-
-/* ARTICLE */
-
-#category:hover span {
-    display: inline;
+#text-intro {
+    display: none;
+}
+#text-banner {
+    display: initial;
 }
 
-.text-banner div {
+/* ARTICLE */
+#category span {
+    font-size: 20px;
+}
+.title-container {
+    transition: 0.5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+#category:hover img {
+    opacity: 0.5;
+}
+#category:hover .title-container {
+    opacity: 1;
+}
+
+#text-banner div {
     font-size: xx-large;
+}
+
+#product-checkout {
+    flex-direction: row !important;
+    margin: 0;
 }

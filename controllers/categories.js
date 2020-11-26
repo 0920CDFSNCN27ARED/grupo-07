@@ -2,36 +2,33 @@ const path = require("path");
 
 const categoriesController = {
     getPlaystation: (req, res) => {
-        res.sendFile(
+        res.render(
             path.resolve(
                 __dirname,
-                "../views/categories/playstation-category.html"
+                "../views/categories/playstation-category.ejs"
             )
         );
     },
     getXbox: (req, res) => {
-        res.sendfile(
-            path.resolve(__dirname, "../views/categories/xbox-category.html")
+        res.render(
+            path.resolve(__dirname, "../views/categories/xbox-category.ejs")
         );
     },
     getNintendo: (req, res) => {
-        res.sendFile(
-            path.resolve(
-                __dirname,
-                "../views/categories/nintendo-category.html"
-            )
+        res.render(
+            path.resolve(__dirname, "../views/categories/nintendo-category.ejs")
         );
     },
     getRetro: (req, res) => {
-        res.sendFile(
-            path.resolve(__dirnam, "../views/categories/retro-category.html")
+        res.render(
+            path.resolve(__dirnam, "../views/categories/retro-category.ejs")
         );
     },
     getAccesories: (req, res) => {
-        res.sendFile(
+        res.render(
             path.resolve(
                 __dirname,
-                "../views/categories/accesories-category.html"
+                "../views/categories/accesories-category.ejs"
             )
         );
     },

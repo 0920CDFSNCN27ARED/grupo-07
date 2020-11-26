@@ -1,13 +1,4 @@
-.text-banner {
-    display: initial;
-}
-.text-intro {
-    display: none;
-}
-
 #category {
     padding: 1rem !important;
-}
-#category span {
-    display: none;
+    /* max-width: 60vw; */
 }

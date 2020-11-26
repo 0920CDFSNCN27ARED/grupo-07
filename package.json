@@ -4,6 +4,7 @@
   "description": "Este sitio se especializa en la venta de consolas de todas las generaciones para uso dómestico. Orientado a jugadores de todas de las edades.",
   "main": "app.js",
   "dependencies": {
+    "ejs": "^3.1.5",
     "express": "^4.17.1",
     "path": "^0.12.7"
   },

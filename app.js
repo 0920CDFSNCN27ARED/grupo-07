@@ -1,8 +1,12 @@
 const express = require("express");
 const app = express();
+const path = require("path");
 
 app.listen(3030, () => "Server is running in port 3030");
 app.use(express.static("public"));
+
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "ejs");
 
 const mainRoutes = require("./routes/main.js");
 app.use("/", mainRoutes);
