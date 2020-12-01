@@ -63,7 +63,8 @@
                 Registro
             </h2>
 
-            <form action="/" method="post" class="row">
+            <!-- ?_method=PUT - ?_method=DELETE como query string en action  -->
+            <form action="/register" method="post" class="row">
                 <div id="contact" class="col-md-6 w-100 margin-y-20">
                     <strong>Datos de contacto</strong>
 
@@ -176,14 +177,14 @@
                         />
                     </div>
                     <div class="form-group">
-                        <label for="pw-rep"
+                        <label for="password-bis"
                             >Vuelve a ingresar tu contraseña</label
                         >
                         <input
                             type="password"
                             class="form-control"
-                            name="pw-rep"
-                            id="pw-rep"
+                            name="password-bis"
+                            id="password-bis"
                         />
                     </div>
                 </div>

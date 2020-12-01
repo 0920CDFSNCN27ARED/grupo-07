@@ -5,24 +5,37 @@ const path = require("path");
 app.listen(3030, () => "Server is running in port 3030");
 app.use(express.static("public"));
 
+//Para usar EJS
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
+// Para usar POST
+// - todo aquello que llegue desde un formulario, queremos capturarlo en forma de objeto literal.
+// - tenemos la posibilidad de convertir esa información en un formato json
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+
+// Para usar PUT y DELETE
+// npm install method-override
+
+const methodOverride = require("method-override");
+app.use(methodOverride("_method"));
+
+// Rutas + Controladores
 const mainRoutes = require("./routes/main.js");
-app.use("/", mainRoutes);
-
 const categoriesRoutes = require("./routes/categories.js");
-app.use("/categories", categoriesRoutes);
 const productRoutes = require("./routes/product.js");
-app.use("/product", productRoutes);
 const shopRoutes = require("./routes/shop.js");
-app.use("/shop", shopRoutes);
-
 const registerRoutes = require("./routes/register.js");
-app.use("/register", registerRoutes);
 const loginRoutes = require("./routes/login.js");
+
+app.use("/", mainRoutes);
+app.use("/categories", categoriesRoutes);
+app.use("/product", productRoutes);
+app.use("/shop", shopRoutes);
+app.use("/register", registerRoutes);
 app.use("/login", loginRoutes);
 
-app.get("*", (req, res) => {
-    res.status(404).send("No hay nada por aquí");
+app.use((req, res, next) => {
+    res.status(404).render("/views/not-found");
 });
