@@ -1,0 +1,97 @@
+[{
+    "id": 1,
+    "name": "Playstation 1",
+    "price": "200",
+    "description": "La revolucionaria PlayStation presentaba un diseño elegante y formato CD, por lo que los juegos eran más grandes, empleaban gráficos en 3D y un sonido superior a cualquier otro sistema anterior. En menos de una década, se convirtió en la primera consola en vender más de 100 millones de unidades en todo el mundo.",
+    "releaseDate": "1994 (JAPÓN), 1995 (AMÉRICA, EUROPA)",
+    "specs": {
+        "cpu": "32-bit R3000A RISC clocked at 33.8688 MHZ, 30 MIPS, and 132 Mb/s bus",
+        "gpu": "Graphics Synthesizer running at 147 MHz, 4 MB",
+        "memory": "2 MB (16 Mbit)",
+        "storage": "8 MB memory card, 40 GB Hard Drive"
+    },
+    "logo": null,
+    "mainImage": null,
+    "color": null,
+    "category": "playstation"
+}, {
+    "id": 2,
+    "name": "Playstation 2",
+    "price": "500",
+    "description": "Si PS One fue la revolución de los juegos, PlayStation 2 fue la evolución que marcó una nueva pauta a seguir en el medio con sus gráficos en 3D de alta definición y la opción de juego en línea. Además, el reproductor de DVD integrado permitía que ver películas fuera tan sencillo como pulsar un botón, sin necesidad de accesorios caros.",
+    "releaseDate": "2000",
+    "specs": {
+        "cpu": "",
+        "gpu": "",
+        "memory": "",
+        "storage": ""
+    },
+    "logo": null,
+    "mainImage": null,
+    "color": null,
+    "category": "playstation"
+}, {
+    "id": 3,
+    "name": "Playstation 3",
+    "price": "800",
+    "description": "Los elementos que hicieron de PS2 un fenómeno mundial sentaron las bases de PlayStation 3. La alta definición ya era la norma, con un lector de discos Blu-ray integrado y disco duro interno, así como unas funciones online versátiles que llevaban toda una gama de servicios y entretenimiento al hogar.",
+    "releaseDate": "2006 (JAPÓN, EE. UU.), 2007 (EUROPA)",
+    "specs": {
+        "cpu": "",
+        "gpu": "",
+        "memory": "",
+        "storage": ""
+    },
+    "logo": null,
+    "mainImage": null,
+    "color": null,
+    "category": "playstation"
+}, {
+    "id": 4,
+    "name": "Playstation 4",
+    "price": "1000",
+    "description": "La octava generación de videojuegos vio la luz con este potente sistema con capacidad de alto rango dinámico (HDR) para unos gráficos espectaculares, retransmisión integrada y acceso a redes sociales que permite compartir nuestros mejores (o peores) momentos jugando, y el mando DUALSHOCK más cómodo hasta la fecha.",
+    "releaseDate": "2013 (EE. UU., EUROPA), 2014 (JAPÓN)",
+    "specs": {
+        "cpu": "",
+        "gpu": "",
+        "memory": "",
+        "storage": ""
+    },
+    "logo": null,
+    "mainImage": null,
+    "color": null,
+    "category": "playstation"
+}, {
+    "id": 5,
+    "name": "PSP",
+    "price": "1000",
+    "description": "Con dos consolas de éxito en su palmarés, el siguiente desafío era pasar a los dispositivos portátiles. Y así fue como apareció este gigante en miniatura que podía con juegos, películas, música y que era capaz de navegar por Internet.",
+    "releaseDate": "2004 (JAPÓN), 2005 (EE. UU., EUROPA)",
+    "specs": {
+        "cpu": "",
+        "gpu": "",
+        "memory": "",
+        "storage": ""
+    },
+    "logo": null,
+    "mainImage": null,
+    "color": null,
+    "category": "playstation"
+}, {
+    "id": 6,
+    "name": "PS Vita",
+    "price": "1000",
+    "description": "Fue la consola portátil más potente del mercado del momento. PlayStation Vita disponía de una pantalla táctil OLED de cinco pulgadas y dos joysticks analógicos (por primera vez en una consola portátil), además de un panel táctil en la parte trasera para un control adicional.",
+    "releaseDate": "2011 (JAPÓN), 2012 (EE. UU., EUROPA)",
+    "specs": {
+        "cpu": "",
+        "gpu": "",
+        "memory": "",
+        "storage": ""
+    },
+    "logo": null,
+    "mainImage": null,
+    "color": null,
+    "category": "playstation"
+}]

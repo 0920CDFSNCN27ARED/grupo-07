@@ -1,80 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Carrito de Compras</title>
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/styles.css" />
-        <link rel="stylesheet" href="css/base.css" />
-        <link rel="stylesheet" href="css/themes.css" />
-        <link rel="stylesheet" href="css/forms.css" />
-    </head>
-    </head>
-    <body class="body">
-        <%- include("partials/header.ejs") %>  
-        <section class="title-font-box d-flex-col">
-            <legend class="title-font">Mi carrito de compras</legend>
-            
-            <section id="shop-steps" class="d-flex justify-content-center align-items-center">
-                <p>Productos seleccionados</p>
-                <p class="hidden">Métodos de pago y envío</p>
-                <p class="hidden">Finalizar compra</p>
-            </section>
 
-            <section class="margin-20">
-                <table>
-                    <caption class="hidden" >Mi carrito de compras</caption>
-                    <thead>
-                        <tr>
-                            <th scope="col">Producto</th>
-                            <th scope="col">U</th>
-                            <th scope="col">Precio Unitario</th>
-                            <th scope="col">Precio Total</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">Playstation 4</th>
-                            <td>1</td>
-                            <td>$ 18000</td>
-                            <td>$ 18000</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Controlador DualShock 4</th>
-                            <td>2</td>
-                            <td>$ 1500</td>
-                            <td>$ 3000</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <th scope="row" colspan="2">Total: </th>
-                            <td>$ 21000</th>
-                        </tr>
-                    </tfoot>
-                </table>
+<head>
+    <%- include("partials/head-base.ejs", {title: "Carrito de compras"}) %>
+</head>
 
-                <div>
-                    <input type="button" value="Save">
-                    <input type="button" value="Update">
-                    <input type="button" value="Delete">
-                </div>
-                <div>
-                    <!-- Detalles de los items del carrito de compra -->
-                </div>
+<body class="body">
+    <%- include("partials/header.ejs") %>
+    <section class="title-font-box d-flex flex-col">
+        <legend class="title-font">Mi carrito de compras</legend>
 
-                <div>
-                    <!-- Productos seleccionados: Precio total -->
-                    <!-- Metodos de pago:  
-                        -Efectivo
-                        -Tarjeta
-                        -Metodo de envío -->
-                    <!-- Finalizar compra: Detalles finales y botón para comprar -->
-                </div>
-            </section>
+        <section id="shop-steps" class="d-flex flex-wrap justify-content-center align-items-center">
+            <p>Productos seleccionados</p>
+            <p class="hidden">Métodos de pago y envío</p>
+            <p class="hidden">Finalizar compra</p>
         </section>
-        <%- include("partials/footer.ejs") %>
-    </body>
+
+        <section class="margin-20">
+            <table>
+                <caption class="hidden">Mi carrito de compras</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Producto</th>
+                        <th scope="col">U</th>
+                        <th scope="col">Precio Unitario</th>
+                        <th scope="col">Precio Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Playstation 4</th>
+                        <td>1</td>
+                        <td>$ 18000</td>
+                        <td>$ 18000</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Controlador DualShock 4</th>
+                        <td>2</td>
+                        <td>$ 1500</td>
+                        <td>$ 3000</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th scope="row" colspan="2">Total: </th>
+                        <td>$ 21000</th>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <div>
+                <input type="button" value="Save">
+                <input type="button" value="Update">
+                <input type="button" value="Delete">
+            </div>
+            <div>
+                <!-- Detalles de los items del carrito de compra -->
+            </div>
+
+            <div>
+                <!-- Productos seleccionados: Precio total -->
+                <!-- Metodos de pago:  
+                    -Efectivo
+                    -Tarjeta
+                    -Metodo de envío -->
+                <!-- Finalizar compra: Detalles finales y botón para comprar -->
+            </div>
+        </section>
+    </section>
+    <%- include("partials/footer.ejs") %>
+</body>
+
 </html>

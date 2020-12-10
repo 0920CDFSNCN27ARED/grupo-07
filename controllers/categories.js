@@ -3,10 +3,7 @@ const path = require("path");
 const categoriesController = {
     getPlaystation: (req, res) => {
         res.render(
-            path.resolve(
-                __dirname,
-                "../views/categories/playstation-category.ejs"
-            )
+            path.resolve(__dirname, "../views/categories/playstation-category.ejs")
         );
     },
     getXbox: (req, res) => {
@@ -21,15 +18,12 @@ const categoriesController = {
     },
     getRetro: (req, res) => {
         res.render(
-            path.resolve(__dirnam, "../views/categories/retro-category.ejs")
+            path.resolve(__dirname, "../views/categories/retro-category.ejs")
         );
     },
     getAccesories: (req, res) => {
         res.render(
-            path.resolve(
-                __dirname,
-                "../views/categories/accesories-category.ejs"
-            )
+            path.resolve(__dirname, "../views/categories/accesories-category.ejs")
         );
     },
 };

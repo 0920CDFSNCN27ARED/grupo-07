@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("../partials/head-base.ejs", {title: product.id}) %>
+</head>
+
+<body class="body">
+    <%- include("../partials/header.ejs") %>
+
+    <main class="container">
+        <section id="product-intro" class="backdrop-filter">
+            <div class="my-3">
+                <img class="w-100 my-2" src=<%= product.logo %> alt="logo">
+            </div>
+
+            <div id="description-box" class="mw-75 w-100 margin-bottom-1em">
+                <p class="font-smaller">
+                    <%= product.name %>
+                </p>
+                <p class="font-smaller">
+                    <%= product.releaseDate %>
+                </p>
+                <p class="font-smaller">
+                    <%= product.description %>
+                </p>
+            </div>
+
+            <div class="mw-75 m-2">
+                <img class="w-100" src=<%= product.mainImage %> alt="Imagen del producto" />
+            </div>
+        </section>
+
+        <section id="product-specs"
+            class="backdrop-filter d-flex flex-column flex-wrap w-100 align-items-center text-center my-3">
+            <div id="font-title-box" class="w-100 my-2">
+                <strong class="font-title">Especificaciones</strong>
+            </div>
+            <p class="h-50 m-2 font-smaller">
+                CPU - <%= product.specs.cpu %>
+            </p>
+            <p class="h-50 m-2 font-smaller">
+                GPU - <%= product.specs.gpu %>
+            </p>
+            <p class="h-50 m-2 font-smaller">
+                MEMORY - <%= product.specs.memory %>
+            </p>
+            <p class="h-50 m-2 font-smaller">
+                STORAGE - <%= product.specs.storage %>
+            </p>
+
+        </section>
+
+        <section id="product-checkout" class="backdrop-filter d-flex flex-wrap flex-column w-100 align-items-center">
+            <div class="w-50 m-2 m-md-0 p-md-3">
+                <img class="w-100" src=<%= product.shopImage %> alt="Imagen 2" />
+            </div>
+            <section class="d-flex flex-wrap w-50 h-100">
+                <div class="d-flex flex-wrap justify-content-between padding-y-10 w-100">
+                    <label for="modelo">Modelo:</label>
+
+                    <select id="modelo">
+                        <option value="modelo1">Slim</option>
+                        <option value="modelo2">Pro</option>
+                    </select>
+                </div>
+
+                <div class="d-flex flex-wrap justify-content-between padding-y-10 w-100">
+                    <label for="color">Color:</label>
+                    <select id="color">
+                        <option value="color1">Black</option>
+                        <option value="color2">Red</option>
+                    </select>
+                </div>
+
+                <div class="d-flex flex-wrap justify-content-between padding-y-10 w-100">
+                    <label for="cantidad">Cantidad:</label>
+                    <select id="cantidad">
+                        <option value="num1">1</option>
+                        <option value="num2">2</option>
+                        <option value="num3">3</option>
+                    </select>
+                </div>
+
+            </section>
+            <div>
+                <span> <%= product.price %></span>
+            </div>
+            <div class="mx-auto my-3">
+                <button type="submit">Agregar al carrito</button>
+            </div>
+        </section>
+    </main>
+    <%- include("../partials/footer.ejs") %>
+</body>
+
+</html>

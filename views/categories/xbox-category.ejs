@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Xbox</title>
-    </head>
-    <body>
-        <header></header>
 
-        <main>
-            <h3>Xbox</h3>
-            <img src="" alt="Imagen de una Xbox" />
+<head>
+    <%- include("../partials/head-base.ejs", {title: "XBOX"}) %>
+</head>
 
-            <div>
-                <a href=""><img src="" alt="Xbox" /></a>
-                <p>Xbox</p>
-                <a href=""><img src="" alt="Xbox 360" /></a>
-                <p>Xbox 360</p>
-                <a href=""><img src="" alt="Xbox One" /></a>
-                <p>Xbox One</p>
-            </div>
-        </main>
+<body>
 
-        <footer></footer>
-    </body>
+    <%- include("../partials/header.ejs") %>
+
+    <main>
+        <h3>XBOX</h3>
+        <img src="" alt="Imagen de una Xbox" />
+
+        <div>
+            <a href=""><img src="" alt="XBOX" /></a>
+            <p>XBOX</p>
+            <a href=""><img src="" alt="XBOX 360" /></a>
+            <p>XBOX 360</p>
+            <a href=""><img src="" alt="XBOX ONE" /></a>
+            <p>XBOX ONE</p>
+        </div>
+    </main>
+
+    <%- include("../partials/footer.ejs") %>
+
+</body>
+
 </html>

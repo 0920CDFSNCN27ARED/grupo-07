@@ -1,9 +1,9 @@
 const path = require("path");
 
-const mainController = {
+const indexController = {
     getHome: (req, res) => {
         res.render(path.resolve(__dirname, "../views/index.ejs"));
     },
 };
 
-module.exports = mainController;
+module.exports = indexController;

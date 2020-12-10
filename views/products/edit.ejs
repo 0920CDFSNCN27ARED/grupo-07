@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("../partials/head-base.ejs", {title: "Formulario de edición"}) %>
+</head>
+
+<body>
+    <%- include('../partials/header') %>
+
+    <main class="flex-grow">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="product-title">Estás editando: <i> <%= product.name %></i></h2>
+                </div>
+            </div>
+            <div class="col-12">
+                <form action="/product/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                    <div class="row product-detail">
+                        <h3>Detalle: </h3>
+                        <div class="col-12 col-md-6">
+                            <label for="name" class="form-label">Nombre del producto:</label>
+                            <input type="text" id="name" name="name" class="form-input" value="<%= product.name %>">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="price" class="form-label">Precio del producto:</label>
+                            <input type="text" id="price" name="price" class="form-input" value="<%= product.price %>">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="description" class="form-label">Descripcion:</label>
+                            <input type="textarea" id="description" name="description" class="form-input"
+                                value="<%= product.description %>">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="releaseDate" class="form-label">Fecha de lanzamiento:</label>
+                            <input type="text" id="releaseDate" name="releaseDate" class="form-input"
+                                value="<%= product.releaseDate %>">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <h3>Especificaciones:</h3>
+
+                            <label for="cpu" class="form-label">CPU:</label>
+                            <input type="text" id="cpu" name="cpu" class="form-input" value="<%= product.specs.cpu %>">
+
+                            <label for="gpu" class="form-label">GPU:</label>
+                            <input type="text" id="gpu" name="gpu" class="form-input" value="<%= product.specs.gpu %>">
+
+                            <label for="memory" class="form-label">Memoria:</label>
+                            <input type="text" id="memory" name="memory" class="form-input"
+                                value="<%= product.specs.memory %>">
+
+                            <label for="storage" class="form-label">Espacio de almacenamiento:</label>
+                            <input type="text" id="storage" name="storage" class="form-input"
+                                value="<%= product.specs.storage %>">
+                        </div>
+                        <h3>Imágenes</h3>
+                        <div class="col-12 col-md-6">
+                            <img src=<%= product.logo %> alt="Imagen a editar">
+                            <label for="logo">Logo del producto:</label>
+                            <input type="file" name="logo" id="logo">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <img src=<%= product.mainImage %> alt="Imagen a editar">
+                            <label for="mainImage">Imagen principal:</label>
+                            <input type="file" name="mainImage" id="mainImage">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <img src=<%= product.shopImage %> alt="Imagen a editar">
+                            <label for="shopImage">Imagen del carrito:</label>
+                            <input type="file" name="shopImage" id="shopImage">
+                        </div>
+
+                        <div class="col-12 col-md-6">
+                            <label for="category" class="form-label">Categoría:</label>
+                            <select name="category" id="category" class="form-input">
+                                <option value="">Elegí</option>
+                                <option value="playstation" <%= product.category == "playstation" ? "selected" : "" %>>
+                                    Playstation
+                                </option>
+                                <option value="xbox" <%= product.category == "xbox" ? "selected" : "" %>>
+                                    Xbox
+                                </option>
+                                <option value="nintendo" <%= product.category == "nintendo" ? "selected" : "" %>>
+                                    Nintendo
+                                </option>
+                                <option value="retro" <%= product.category == "retro" ? "selected" : "" %>>
+                                    Retro
+                                </option>
+                                <option value="accesories" <%= product.category == "accesories" ? "selected" : "" %>>
+                                    Accesorios
+                                </option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="save">Guardar producto</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <%- include('../partials/footer') %>
+</body>
+
+</html>

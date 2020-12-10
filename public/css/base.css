@@ -1,17 +1,16 @@
 p {
     margin: 0;
 }
+
 img {
     display: block;
 }
+
 .hidden {
     display: none;
 }
 
-/* center */
-.text-center {
-    text-align: center;
-}
+
 
 /* justify */
 
@@ -20,20 +19,13 @@ img {
 }
 
 /* display: flex */
-.d-flex {
-    display: flex;
-    flex-wrap: wrap;
-}
-.d-flex-col {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
+
 
 /* position */
 .pos-relative {
     position: relative;
 }
+
 .pos-absolute {
     position: absolute;
 }
@@ -41,25 +33,26 @@ img {
 .fit-content {
     width: fit-content;
 }
+
 /* width */
 .w-30 {
     width: 30%;
 }
-.w-50 {
-    width: 50%;
-}
+
 .w-70 {
     width: 70%;
 }
-.w-100 {
-    width: 100%;
-}
+
+
+
 .w-auto {
     width: auto;
 }
+
 .mw-33 {
     max-width: 33%;
 }
+
 .mw-75 {
     max-width: 75%;
 }
@@ -68,9 +61,11 @@ img {
 .h-1em {
     height: 1em;
 }
+
 .h-50 {
     height: 50%;
 }
+
 .h-100 {
     height: 100%;
 }
@@ -79,12 +74,19 @@ img {
 .margin-top-1em {
     margin-top: 1em;
 }
+
+.margin-bottom-1em {
+    margin-bottom: 1em;
+}
+
 .margin-10 {
     margin: 10px;
 }
+
 .margin-y-10 {
     margin: 10px 0;
 }
+
 .margin-x-10 {
     margin: 0 10px;
 }
@@ -92,9 +94,11 @@ img {
 .margin-20 {
     margin: 20px;
 }
+
 .margin-y-20 {
     margin: 20px 0;
 }
+
 .margin-x-20 {
     margin: 0 20px;
 }
@@ -105,19 +109,24 @@ img {
 .padding-10 {
     padding: 10px;
 }
+
 .padding-y-10 {
     padding: 10px 0;
 }
+
 .padding-x-10 {
     padding: 0 10px;
 }
+
 /* 20 */
 .padding-20 {
     padding: 20px;
 }
+
 .padding-y-20 {
     padding: 20px 0;
 }
+
 .padding-x-20 {
     padding: 0 20px;
 }
@@ -129,6 +138,7 @@ img {
 .spacing-1 {
     letter-spacing: 1px;
 }
+
 .spacing-2 {
     letter-spacing: 2px;
 }
@@ -140,6 +150,7 @@ img {
 .order-1 {
     order: 1;
 }
+
 .order-2 {
     order: 2;
 }

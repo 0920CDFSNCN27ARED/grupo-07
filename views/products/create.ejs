@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("../partials/head-base.ejs", {title: "Formulario de creación"}) %>
+</head>
+
+<body>
+    <%- include('../partials/header') %>
+
+    <main class="flex-grow">
+        <div class="container ">
+            <div class="d-flex flex-wrap">
+                <div class="col-12">
+                    <h2 class="product-title">Formulario de creación de productos</h2>
+                </div>
+            </div>
+            <div class="col-12">
+                <form action="/product/create" method="POST" enctype="multipart/form-data">
+                    <div class="row product-detail">
+                        <div class="col-12 col-md-6">
+                            <label for="name" class="form-label">Nombre del producto:</label>
+                            <input type="text" id="name" name="name" placeholder="Ej: Playstation 1" class="form-input">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="price" class="form-label">Precio del producto:</label>
+                            <input type="text" id="price" name="price" placeholder="Ej: $ 2000" class="form-input">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="description" class="form-label">Descripción del producto:</label>
+                            <input type="textarea" id="description" name="description" class="form-input">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="releaseDate" class="form-label">Fecha de lanzamiento:</label>
+                            <input type="text" id="releaseDate" name="releaseDate" placeholder="1994 (JAPÓN)"
+                                class="form-input">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="cpu" class="form-label">CPU:</label>
+                            <input type="text" id="cpu" name="cpu" class="form-input">
+
+                            <label for="gpu" class="form-label">GPU:</label>
+                            <input type="text" id="gpu" name="gpu" class="form-input">
+
+                            <label for="memory" class="form-label">Memoria:</label>
+                            <input type="text" id="memory" name="memory" class="form-input">
+
+                            <label for="storage" class="form-label">Espacio de almacenamiento:</label>
+                            <input type="text" id="storage" name="storage" class="form-input">
+                        </div>
+
+                        <div class="col-12 col-md-6">
+                            <label for="logo">Logo del producto:</label>
+                            <input type="file" name="logo" id="logo">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="mainImage">Imagen principal:</label>
+                            <input type="file" name="mainImage" id="mainImage">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="shopImage">Imagen del carrito:</label>
+                            <input type="file" name="shopImage" id="shopImage">
+                        </div>
+
+                        <div class="col-12 col-md-6">
+                            <label for="category" class="form-label">Categoría:</label>
+                            <select name="category" id="category" class="form-input">
+                                <option value="" selected>Elegí</option>
+                                <option value="playstation">
+                                    Playstation
+                                </option>
+                                <option value="xbox">
+                                    Xbox
+                                </option>
+                                <option value="nintendo">
+                                    Nintendo
+                                </option>
+                                <option value="retro">
+                                    Retro
+                                </option>
+                                <option value="accesories">
+                                    Accesorios
+                                </option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="save">Crear producto</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <%- include('../partials/footer') %>
+</body>
+
+</html>
