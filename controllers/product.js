@@ -43,10 +43,25 @@ const productController = {
             id
         } = req.params;
 
+        // Guarda el producto requerido
         const product = products.find(prod => {
             return prod.id == id;
         })
 
+        // if(req.files){
+        //     filename = req.file;
+        // }
+        // else if (!req.files.filename){
+        //     if(req.files.filename == product.logo){
+        //         file 
+        //     }
+        // }
+        // let filename = req.file[0].filename ? req.file : product.logo;
+        
+        product.logo = req.files[0].filename;
+        product.mainImage = req.files[1].filename;
+        product.shopImage = req.files[2].filename;
+        
         product.name = req.body.name;
         product.price = req.body.price;
         product.description = req.body.description;
@@ -57,22 +72,20 @@ const productController = {
         product.specs.memory = req.body.memory;
         product.specs.storage = req.body.storage;
 
-        product.logo = req.files[0].filename;
-        product.mainImage = req.files[1].filename;
-        product.shopImage = req.files[2].filename;
 
         product.category = req.body.category;
 
+        // database.splice(database.indexOf(selectedProduct), 1, editedProduct)
 
         saveToDB(products);
 
-        res.redirect("/product/edit/1");
+        res.redirect("/");
     },
     create: (req, res, next) => {
         const products = getProducts();
 
         const newProd = {
-            id: products.length + 1,
+            id: products[products.length - 1].id + 1,
             name: req.body.name,
             price: req.body.price,
             description: req.body.description,
@@ -94,7 +107,19 @@ const productController = {
 
         res.redirect("/product/create")
 
-    }
-};
-
-module.exports = productController;
+    },
+    search: (req, res) => {
+        let products = getProducts()
+        let words = req.query.keywords.split(" ");
+        let productsMatch = [];
+        products.forEach(product => {
+            words.forEach(word => {
+                if (product.name.includes(word)) {
+                    productsMatch.push(product)
+                }
+            });
+        });
+        res.render("results", {products: productsMatch, search: words})  
+    },
+}
+        module.exports = productController;

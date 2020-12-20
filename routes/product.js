@@ -25,6 +25,6 @@ router.get("/create", productController.showCreate);
 router.post("/create", upload.any(), productController.create);
 
 router.get("/edit/:id", productController.showEdit);
-router.post("/edit", upload.any(), productController.edit);
+router.put("/edit/:id", upload.any(), productController.edit);
 
 module.exports = router;
