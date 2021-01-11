@@ -1,37 +1,53 @@
 const express = require("express");
-const app = express();
 const path = require("path");
+const session = require("express-session")
+const cookieParser = require("cookie-parser")
+const logger = require("./middlewares/logger")
+const authenticate = require("./middlewares/auth/authenticate")
+const cookieAuth = require("./middlewares/auth/cookieAuth")
 
-app.listen(3030, () => "Server is running in port 3030");
-app.use(express.static("public"));
+const app = express();
 
-//Para usar EJS
-app.set("views", path.join(__dirname, "views"));
-app.set("view engine", "ejs");
-
-// Para usar POST
-// - todo aquello que llegue desde un formulario, queremos capturarlo en forma de objeto literal.
-app.use(express.urlencoded({
-    extended: false
-}));
-// - tenemos la posibilidad de convertir esa información en un formato json
-app.use(express.json());
-
-// Para usar PUT y DELETE
-// npm install method-override
-const methodOverride = require("method-override");
-app.use(methodOverride("_method"));
-
-// Rutas + Controladores
 const indexRoutes = require("./routes/index.js");
 const categoriesRoutes = require("./routes/categories.js");
 const productRoutes = require("./routes/product.js");
 const shopRoutes = require("./routes/shop.js");
 const usersRoutes = require("./routes/users.js");
 
+app.listen(3030, () => "Server is running in port 3030");
+app.use(express.static("public"));
+
+/// MIDDLEWARES
+
+// Para usar POST
+// - todo aquello que llegue desde un formulario, queremos capturarlo en forma de objeto literal.
+app.use(express.urlencoded({
+    extended: false
+}));
+app.use(express.json());
+// Para usar PUT y DELETE
+// npm install method-override
+const methodOverride = require("method-override");
+app.use(methodOverride("_method"));
+
+app.use(logger);
+app.use(cookieParser())
+app.use(cookieAuth)
+app.use(session({
+    secret: "Shh!"
+}));
+app.use(authenticate);
+app.locals.user = null;
+
+//Para usar EJS
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "ejs");
+
+// Rutas + Controladores
+
 app.use("/", indexRoutes);
 app.use("/categories", categoriesRoutes);
-app.use("/product", productRoutes);
+app.use("/products", productRoutes);
 app.use("/shop", shopRoutes);
 app.use("/users", usersRoutes);
 

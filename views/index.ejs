@@ -8,6 +8,8 @@
 <body class="body">
     <%- include("partials/header.ejs") %>
 
+    <h1>Bienvenido <%= user ? user.username : "Invitado" %> </h1>
+
     <div id="text-intro" class="font-title-box  backdrop-filter">
         <div class="font-title">Lorem ipsum dolor.</div>
         <div class="middle-text">Lorem, ipsum dolor sit amet consectetur.</div>

@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "firstName": "Federico",
+    "lastName": "Silva",
+    "age": "26",
+    "tel": "0111549274626",
+    "address": "Curapaligue 441",
+    "localidad": "Buenos Aires",
+    "city": "Buenos Aires",
+    "province": "caba",
+    "username": "serteyf",
+    "email": "silvafederico.sf@gmail.com",
+    "pass": "$2b$12$iQwXjUKidL3PgFmeFDXI/utIWkyKq.c08DlnHrprRGIt/qoHIShFK"
+  }
+]

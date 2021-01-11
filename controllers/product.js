@@ -1,10 +1,12 @@
 const pathResolve = require("../utils/path-resolve.js")
 const getProducts = require("../utils/get-products.js")
-const saveToDB = require("../utils/save-to-db.js")
+const saveProducts = require("../utils/save-products.js")
 
 
 const productController = {
-
+    showAll: (req, res) => {
+        res.send(getProducts())
+    },
     showDetail: (req, res) => {
         const products = getProducts();
         const product = products.find((prod) => {
@@ -48,20 +50,34 @@ const productController = {
             return prod.id == id;
         })
 
-        // if(req.files){
-        //     filename = req.file;
+        // // if(req.files){
+        // //     filename = req.file;
+        // // }
+        // // else if (!req.files.filename){
+        // //     if(req.files.filename == product.logo){
+        // //         file 
+        // //     }
+        // // }
+        // // let filename = req.files[0].filename ? req.file : product.logo;
+        // // let filename = req.files[1].filename ? req.file : product.mainImage;
+        // // let filename = req.files[2].filename ? req.file : product.shopImage;
+        // console.log(files)
+        // return;
+        // switch (!filename) {
+        //     case req.files[0].filename:
+        //         product.logo
+        //     case req.files[1].filename:
+        //         product.mainImage
+        //     case req.files[2].filename:
+        //         product.shopImage
+        //     default:
+        //         req.file
         // }
-        // else if (!req.files.filename){
-        //     if(req.files.filename == product.logo){
-        //         file 
-        //     }
-        // }
-        // let filename = req.file[0].filename ? req.file : product.logo;
-        
+
         product.logo = req.files[0].filename;
         product.mainImage = req.files[1].filename;
         product.shopImage = req.files[2].filename;
-        
+
         product.name = req.body.name;
         product.price = req.body.price;
         product.description = req.body.description;
@@ -77,7 +93,7 @@ const productController = {
 
         // database.splice(database.indexOf(selectedProduct), 1, editedProduct)
 
-        saveToDB(products);
+        saveProducts(products);
 
         res.redirect("/");
     },
@@ -103,23 +119,35 @@ const productController = {
             category: req.body.category,
         };
         products.push(newProd);
-        saveToDB(products);
+        saveProducts(products);
 
         res.redirect("/product/create")
 
     },
-    search: (req, res) => {
-        let products = getProducts()
-        let words = req.query.keywords.split(" ");
-        let productsMatch = [];
-        products.forEach(product => {
-            words.forEach(word => {
-                if (product.name.includes(word)) {
-                    productsMatch.push(product)
-                }
-            });
-        });
-        res.render("results", {products: productsMatch, search: words})  
-    },
+    delete: (req, res) => {
+        const products = getProducts()
+        const {
+            id
+        } = req.params;
+        const filtered = products.splice(id - 1, 1);
+        saveProducts(filtered);
+        res.redirect("/product/edit")
+    }
+    // search: (req, res) => {
+    //     let products = getProducts()
+    //     let words = req.query.keywords.split(" ");
+    //     let productsMatch = [];
+    //     products.forEach(product => {
+    //         words.forEach(word => {
+    //             if (product.name.includes(word)) {
+    //                 productsMatch.push(product)
+    //             }
+    //         });
+    //     });
+    //     res.render("results", {
+    //         products: productsMatch,
+    //         search: words
+    //     })
+    // },
 }
-        module.exports = productController;
+module.exports = productController;

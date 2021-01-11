@@ -1,3 +1,5 @@
+
+
 # Start doing
 
 - Familiarizarnos más con el Trello y usarlo despues de cada cambio o update

@@ -8,27 +8,35 @@
 <body class="d-flex flex-wrap flex-column text-center margin-10">
     <h2>Ingresa con tu cuenta</h2>
 
-    <form action="/login" method="GET">
+    <form action="/users/login" method="POST">
+        <% if (typeof errors != 'undefined'){ %>
+        <ul>
+            <% for (i=0; i < errors.length; i++) {%>
+            <li><%= errors[i].msg %></li>
+            <% } %>
+        </ul>
+        <% } %>
         <div class="margin-10">
             <div class="margin-10">
                 <label for="username" class="hidden">Username:</label>
                 <input type="text" id="username" name="username" placeholder="Escribe tu nombre de usuario" />
             </div>
             <div>
-                <label for="password" class="hidden">Password</label>
-                <input type="password" name="password" id="password" placeholder="Escribe tu contraseña" />
+                <label for="pass" class="hidden">Password</label>
+                <input type="password" name="pass" id="pass" placeholder="Escribe tu contraseña" />
             </div>
             <div>
                 <a class="font-12" href="#">Olvidaste tu contraseña?</a>
             </div>
             <div class="margin-10">
-                <input type="checkbox" name="logged-in" id="logged-in" />
-                <label for="logged-in">Mantenerme logueado</label>
+                <label for="recordame">Mantenerme logueado</label>
+                <input type="checkbox" name="recordame" id="recordame" />
             </div>
             <div class="margin-10">
                 <button type="submit" value="Enviar">Enviar</button>
             </div>
         </div>
+
     </form>
 </body>
 

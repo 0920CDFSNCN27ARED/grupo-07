@@ -95,6 +95,9 @@
                         <div class="col-12">
                             <button type="submit" class="save">Guardar producto</button>
                         </div>
+                        <form action="POST" method="/product/delete/<%= product.id %>?_method=DELETE">
+                            <button type="submit">Delete</button>
+                        </form>
                     </div>
                 </form>
             </div>
