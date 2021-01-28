@@ -71,8 +71,8 @@ const usersController = {
             if (!user) return res.redirect("/users/login");
 
             req.session.loggedUserId = user.id;
-            if (req.body.recordame != undefined) {
-                res.cookie("recordame", req.session.loggedUserId, {
+            if (req.body.rememberMe != undefined) {
+                res.cookie("rememberMe", req.session.loggedUserId, {
                     maxAge: 60000
                 })
             }
@@ -82,11 +82,11 @@ const usersController = {
         }
     },
     logout: (req, res) => {
-        if (res.locals.user) {
-            delete res.locals.user;
-        }
-        return res.redirect("/")
+        req.session.loggedUserId = null;
+        res.clearCookie("rememberMe");
+        res.redirect("/");
     }
+
 }
 
 module.exports = usersController;
