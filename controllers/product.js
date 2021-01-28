@@ -5,7 +5,10 @@ const saveProducts = require("../utils/save-products.js")
 
 const productController = {
     showAll: (req, res) => {
-        res.send(getProducts())
+        const products = getProducts()
+        res.render(pathResolve('../views/products/list.ejs'), {
+            products: products
+        })
     },
     showDetail: (req, res) => {
         const products = getProducts();
@@ -131,7 +134,7 @@ const productController = {
         } = req.params;
         const filtered = products.splice(id - 1, 1);
         saveProducts(filtered);
-        res.redirect("/product/edit")
+        res.redirect("/product/list")
     }
     // search: (req, res) => {
     //     let products = getProducts()

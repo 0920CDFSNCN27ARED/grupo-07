@@ -1,13 +1,23 @@
 const express = require("express");
 const router = express.Router();
-
-
+const multer = require("multer");
 
 const usersController = require("../controllers/users.js");
 const getUsers = require("../utils/get-users.js");
+
+var storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, 'public/img/users')
+    },
+    filename: function (req, file, cb) {
+        cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
+    }
+})
+var upload = multer({
+    storage: storage
+})
+
 const users = getUsers();
-
-
 
 const {
     check,
@@ -16,13 +26,13 @@ const {
 } = require("express-validator")
 
 router.get("/register", usersController.getRegister);
-router.post("/register", [
-    check('firstName').isLength(),
+router.post("/register", upload.single("avatar"), [
+    check('firstName').isLength().withMessage("Este campo no puede estar vacío"),
     check('lastName').isLength(),
     check('age').isLength().isInt({
         min: 0,
         max: 99
-    }),
+    }).withMessage("Este campo no puede estar vacío"),
     check('tel').isMobilePhone(),
     check('address').isLength(),
     check('localidad').isLength(),
@@ -33,7 +43,7 @@ router.post("/register", [
 
     check('pass').isLength({
         min: 8
-    }),
+    }).withMessage("La contraseña debe tener un mínimo de 8 caracteres"),
     check('pass_confirm').isLength(),
     body('email').custom(value => {
         const foundUser = users.find(user => {
@@ -64,5 +74,6 @@ router.post("/login", [
         max: 10
     }).withMessage("El campo debe tener un mínimo de 3 y un máximo de 8 carácteres")
 ], usersController.login);
+router.post("/logout", usersController.logout)
 
 module.exports = router;

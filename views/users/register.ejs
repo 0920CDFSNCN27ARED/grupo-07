@@ -14,14 +14,7 @@
         </h2>
 
         <!-- ?_method=PUT - ?_method=DELETE como query string en action  -->
-        <form action="/users/register" method="post" class="row">
-            <% if (typeof errors != 'undefined'){ %>
-            <ul>
-                <% for (i=0; i < errors.length; i++) {%>
-                <li style="color: aliceblue;"><%= errors[i].msg %></li>
-                <% } %>
-            </ul>
-            <% } %>
+        <form action="/users/register" method="post" enctype="multipart/form-data" class="row">
             <div id="contact" class="col-md-6 w-100 margin-y-20">
                 <strong>Datos de contacto</strong>
 
@@ -92,6 +85,12 @@
                     <label for="pass_confirm">Vuelve a ingresar tu contraseña</label>
                     <input type="password" class="form-control" name="pass_confirm" id="pass_confirm" />
                 </div>
+                <div class="form-group">
+                    <label for="avatar">Ingresa una foto de perfil</label>
+                    <input type="file" class="form-control" name="avatar" id="avatar" />
+                </div>
+
+
             </div>
             <div>
                 <div class="tyc-box justify-content-center">
@@ -109,6 +108,13 @@
                 <a href="/users/login" class="py-2">¿Ya tienes una cuenta?</a>
             </div>
 
+            <% if (typeof errors != 'undefined'){ %>
+            <ul>
+                <% for (i=0; i < errors.length; i++) {%>
+                <li style="color: aliceblue;"><%= errors[i].msg %></li>
+                <% } %>
+            </ul>
+            <% } %>
         </form>
     </main>
     <%- include("../partials/footer.ejs") %>

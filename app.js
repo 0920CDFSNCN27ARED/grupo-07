@@ -5,6 +5,7 @@ const cookieParser = require("cookie-parser")
 const logger = require("./middlewares/logger")
 const authenticate = require("./middlewares/auth/authenticate")
 const cookieAuth = require("./middlewares/auth/cookieAuth")
+const methodOverride = require("method-override");
 
 const app = express();
 
@@ -27,27 +28,26 @@ app.use(express.urlencoded({
 app.use(express.json());
 // Para usar PUT y DELETE
 // npm install method-override
-const methodOverride = require("method-override");
 app.use(methodOverride("_method"));
 
+app.locals.user = null;
 app.use(logger);
 app.use(cookieParser())
-app.use(cookieAuth)
 app.use(session({
     secret: "Shh!"
 }));
+app.use(cookieAuth)
 app.use(authenticate);
-app.locals.user = null;
 
 //Para usar EJS
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
-// Rutas + Controladores
+// Controladores
 
 app.use("/", indexRoutes);
 app.use("/categories", categoriesRoutes);
-app.use("/products", productRoutes);
+app.use("/product", productRoutes);
 app.use("/shop", shopRoutes);
 app.use("/users", usersRoutes);
 

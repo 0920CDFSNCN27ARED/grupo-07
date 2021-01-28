@@ -20,7 +20,7 @@ var upload = multer({
 const productController = require("../controllers/product.js");
 const router = express.Router();
 
-router.get("/", productController.showAll)
+router.get("/list", productController.showAll)
 router.get("/detail/:id", productController.showDetail);
 
 router.get("/create", isSignedIn, productController.showCreate);

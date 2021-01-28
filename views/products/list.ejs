@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("../partials/head-base.ejs", {title: "Listado de productos"}) %>
+</head>
+
+<body>
+    <%- include("../partials/header.ejs") %>
+    <ul>
+        <% for( let i = 0; i < products.length; i++ ) { %>
+        <br>
+        <li> <%= products[i].name %> </li>
+        <br>
+        <li> <%= products[i].price %> </li>
+        <br>
+        <li> <%= products[i].description %> </li>
+        <br>
+        <li> <%= products[i].releaseDate %> </li>
+        <br>
+        <li> <%= products[i].specs %> </li>
+        <br>
+        <% } %>
+    </ul>
+    <%- include("../partials/footer.ejs") %>
+</body>
+
+</html>

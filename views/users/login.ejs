@@ -9,13 +9,6 @@
     <h2>Ingresa con tu cuenta</h2>
 
     <form action="/users/login" method="POST">
-        <% if (typeof errors != 'undefined'){ %>
-        <ul>
-            <% for (i=0; i < errors.length; i++) {%>
-            <li><%= errors[i].msg %></li>
-            <% } %>
-        </ul>
-        <% } %>
         <div class="margin-10">
             <div class="margin-10">
                 <label for="username" class="hidden">Username:</label>
@@ -37,6 +30,13 @@
             </div>
         </div>
 
+        <% if (typeof errors != 'undefined'){ %>
+        <ul>
+            <% for (i=0; i < errors.length; i++) {%>
+            <li><%= errors[i].msg %></li>
+            <% } %>
+        </ul>
+        <% } %>
     </form>
 </body>
 

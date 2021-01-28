@@ -2,7 +2,6 @@ const path = require("path");
 const fs = require("fs");
 const bcrypt = require("bcrypt");
 
-
 const getUsers = require("../utils/get-users");
 const saveUsers = require("../utils/save-users");
 const newUserID = require("../utils/new-user-id");
@@ -37,10 +36,13 @@ const usersController = {
 
             delete req.body.pass_confirm;
 
+            let filename = req.file.filename ? req.file : product.logo;
+
             const newUser = {
                 id: userID,
                 ...req.body,
                 pass: bcrypt.hashSync(req.body.pass, 12),
+                avatar: req.file.filename
             }
 
             users.push(newUser);
@@ -59,7 +61,6 @@ const usersController = {
             })
         } else {
             const users = getUsers();
-            // Encuentra el user en la base de datos que matchee el usuario y la contraseña en ese orden
             const user = users.find((user) => {
                 return (
                     user.username == req.body.username &&
@@ -67,13 +68,11 @@ const usersController = {
                 );
             });
 
-            // Si no encuentra el usuario, redirige a login
             if (!user) return res.redirect("/users/login");
 
-            // Si encuentra el usuario, guarda el ID en la session
-            req.session.loggedUserID = user.id;
+            req.session.loggedUserId = user.id;
             if (req.body.recordame != undefined) {
-                res.cookie("recordame", loggedUserID, {
+                res.cookie("recordame", req.session.loggedUserId, {
                     maxAge: 60000
                 })
             }
@@ -82,6 +81,12 @@ const usersController = {
             return res.redirect("/");
         }
     },
+    logout: (req, res) => {
+        if (res.locals.user) {
+            delete res.locals.user;
+        }
+        return res.redirect("/")
+    }
 }
 
 module.exports = usersController;
