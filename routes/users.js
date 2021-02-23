@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const multer = require("multer");
+const path = require("path");
 
 const usersController = require("../controllers/users.js");
 const getUsers = require("../utils/get-users.js");
@@ -62,18 +63,21 @@ router.post("/register", upload.single("avatar"), [
 ], usersController.register);
 
 router.get("/login", usersController.getLogin);
-router.post("/login", [
-    check("username")
-    .isLength({
-        min: 3,
-        max: 10
-    }).withMessage("El campo debe tener un mínimo de 3 y un máximo de 8 carácteres"),
-    check("pass")
-    .isLength({
-        min: 3,
-        max: 10
-    }).withMessage("El campo debe tener un mínimo de 3 y un máximo de 8 carácteres")
-], usersController.login);
+router.post("/login", usersController.login);
 router.post("/logout", usersController.logout)
 
 module.exports = router;
+
+
+// , [
+//     check("username")
+//     .isLength({
+//         min: 3,
+//         max: 10
+//     }).withMessage("El campo debe tener un mínimo de 3 y un máximo de 8 carácteres"),
+//     check("pass")
+//     .isLength({
+//         min: 3,
+//         max: 10
+//     }).withMessage("El campo debe tener un mínimo de 3 y un máximo de 8 carácteres")
+// ]

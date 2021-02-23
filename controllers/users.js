@@ -36,13 +36,13 @@ const usersController = {
 
             delete req.body.pass_confirm;
 
-            let filename = req.file.filename ? req.file : product.logo;
+            let filename = req.file.filename ? req.file : user.avatar;
 
             const newUser = {
                 id: userID,
                 ...req.body,
                 pass: bcrypt.hashSync(req.body.pass, 12),
-                avatar: req.file.filename
+                avatar: filename
             }
 
             users.push(newUser);

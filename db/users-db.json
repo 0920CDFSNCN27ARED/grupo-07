@@ -1,15 +1,56 @@
-[{
-  "id": 1,
-  "firstName": "Federico",
-  "lastName": "Silva",
-  "age": "26",
-  "tel": "0111549274626",
-  "address": "Curapaligue 441",
-  "localidad": "Buenos Aires",
-  "city": "Buenos Aires",
-  "province": "caba",
-  "username": "serteyf",
-  "email": "silvafederico.sf@gmail.com",
-  "pass": "$2b$12$iQwXjUKidL3PgFmeFDXI/utIWkyKq.c08DlnHrprRGIt/qoHIShFK",
-  "admin": true
-}]
+[
+  {
+    "id": 1,
+    "firstName": "Federico",
+    "lastName": "Silva",
+    "age": "26",
+    "tel": "0111549274626",
+    "address": "Curapaligue 441",
+    "localidad": "Buenos Aires",
+    "city": "Buenos Aires",
+    "province": "caba",
+    "username": "serteyf",
+    "email": "silvafederico.sf@gmail.com",
+    "pass": "$2b$12$iQwXjUKidL3PgFmeFDXI/utIWkyKq.c08DlnHrprRGIt/qoHIShFK",
+    "admin": true
+  },
+  {
+    "id": 2,
+    "firstName": "Milena",
+    "lastName": "Porter Dolz",
+    "age": "21",
+    "tel": "1154545454",
+    "address": "colombres 148",
+    "localidad": "almagro",
+    "city": "buenos aires",
+    "province": "caba",
+    "username": "mussdolz",
+    "email": "blabla@gmail.com",
+    "pass": "$2b$12$ZrnKAnp//T3bInjsSFAUNu/JtfD1/KtKxVekXFUSPmFym3y2V/t3m",
+    "avatar": "avatar-1612552433317.jpg"
+  },
+  {
+    "id": 3,
+    "firstName": "pepito",
+    "lastName": "oreo",
+    "age": "45",
+    "tel": "1545454545",
+    "address": "blabla",
+    "localidad": "almagro",
+    "city": "buenos aires",
+    "province": "caba",
+    "username": "pepito",
+    "email": "pepito@gmail.com",
+    "pass": "$2b$12$HRf9.UeajRFbvPsOD5S.lu3dvMKCas3qzUFczaKvt3jQlKoIHPxsa",
+    "avatar": {
+      "fieldname": "avatar",
+      "originalname": "1 turn event 2.jpg",
+      "encoding": "7bit",
+      "mimetype": "image/jpeg",
+      "destination": "public/img/users",
+      "filename": "avatar-1612554147108.jpg",
+      "path": "public\\img\\users\\avatar-1612554147108.jpg",
+      "size": 233053
+    }
+  }
+]
